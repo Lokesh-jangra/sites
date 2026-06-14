@@ -1,20 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Tucker Hamberg Wealth Management | Protecting & Growing Wealth Across Generations</title>
-  <meta name="description" content="Tucker Hamberg is an independent wealth management firm providing personalised, objective financial guidance to high-net-worth individuals, families, and institutions worldwide. Schedule your complimentary consultation today.">
-  <meta name="keywords" content="wealth management, private wealth, financial planning, estate planning, investment management, family office, Tucker Hamberg, independent advisor, fiduciary">
+  <meta name="description"
+    content="Tucker Hamberg is an independent wealth management firm providing personalised, objective financial guidance to high-net-worth individuals, families, and institutions worldwide. Schedule your complimentary consultation today.">
+  <meta name="keywords"
+    content="wealth management, private wealth, financial planning, estate planning, investment management, family office, Tucker Hamberg, independent advisor, fiduciary">
   <meta name="robots" content="index, follow">
   <link rel="canonical" href="https://tuckerhamberg.com/">
   <meta property="og:title" content="Tucker Hamberg Wealth Management | Independent Wealth Advisory">
-  <meta property="og:description" content="Protecting and growing wealth across generations. Independent, personalised, fiduciary financial guidance for HNW individuals and families.">
+  <meta property="og:description"
+    content="Protecting and growing wealth across generations. Independent, personalised, fiduciary financial guidance for HNW individuals and families.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://tuckerhamberg.com/">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&display=swap"
+    rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
   <style>
     /* ---- Homepage-Specific Styles ---- */
@@ -26,12 +32,14 @@
       background: var(--navy-950);
       overflow: hidden;
     }
+
     .hero-slideshow {
       position: absolute;
       inset: 0;
       z-index: 0;
       overflow: hidden;
     }
+
     .hero-slide {
       position: absolute;
       inset: 0;
@@ -40,27 +48,33 @@
       background-size: cover;
       background-position: center;
     }
+
     .hero-slide.active {
       opacity: 1;
       animation: kenBurns 12s linear infinite;
     }
+
     .hero-overlay {
       position: absolute;
       inset: 0;
       background: linear-gradient(to right, rgba(0, 0, 0, 0.92) 0%, rgba(0, 0, 0, 0.7) 50%, rgba(0, 0, 0, 0.4) 100%);
       z-index: 1;
     }
+
     @keyframes kenBurns {
       0% {
         transform: scale(1.05) translate(0, 0);
       }
+
       50% {
         transform: scale(1.15) translate(-1%, -0.5%);
       }
+
       100% {
         transform: scale(1.05) translate(0, 0);
       }
     }
+
     .hero-dots {
       position: absolute;
       bottom: 40px;
@@ -69,6 +83,7 @@
       display: flex;
       gap: var(--space-2);
     }
+
     .hero-dot {
       width: 10px;
       height: 10px;
@@ -79,14 +94,17 @@
       transition: all var(--duration-normal) var(--ease-default);
       padding: 0;
     }
+
     .hero-dot:hover {
       background: rgba(255, 255, 255, 0.6);
     }
+
     .hero-dot.active {
       background: var(--gold-400);
       border-color: var(--gold-400);
       transform: scale(1.2);
     }
+
     .hero::after {
       content: '';
       position: absolute;
@@ -95,12 +113,14 @@
       opacity: 0.5;
       z-index: 2;
     }
+
     .hero-content {
       position: relative;
       z-index: 3;
       max-width: 720px;
       padding: 140px 0 100px;
     }
+
     .hero-overline {
       color: var(--gold-400);
       margin-bottom: var(--space-5);
@@ -108,6 +128,7 @@
       transform: translateY(20px);
       animation: fadeUp 0.8s var(--ease-out) 0.3s forwards;
     }
+
     .hero-title {
       font-family: var(--font-display);
       font-size: var(--display-xl);
@@ -115,27 +136,32 @@
       margin-bottom: var(--space-5);
       line-height: 1.2;
     }
+
     .word-wrapper {
       display: inline-block;
       overflow: hidden;
       vertical-align: bottom;
       margin-right: 0.18em;
     }
+
     .word-wrapper:last-child {
       margin-right: 0;
     }
+
     .word {
       display: inline-block;
       opacity: 0;
       transform: translateY(100%);
       animation: wordReveal 0.8s cubic-bezier(0.23, 1, 0.32, 1) forwards;
     }
+
     @keyframes wordReveal {
       to {
         opacity: 1;
         transform: translateY(0);
       }
     }
+
     .hero-subtitle {
       font-size: var(--body-lg);
       color: rgba(255, 255, 255, 0.7);
@@ -146,6 +172,7 @@
       transform: translateY(20px);
       animation: fadeUp 0.8s var(--ease-out) 0.9s forwards;
     }
+
     .hero-buttons {
       display: flex;
       gap: var(--space-4);
@@ -154,11 +181,13 @@
       transform: translateY(20px);
       animation: fadeUp 0.8s var(--ease-out) 1.1s forwards;
     }
+
     .hero-social-proof {
       opacity: 0;
       transform: translateY(20px);
       animation: fadeUp 0.8s var(--ease-out) 1.4s forwards;
     }
+
     .hero-scroll {
       position: absolute;
       bottom: 40px;
@@ -176,14 +205,35 @@
       opacity: 0;
       animation: fadeUp 0.8s var(--ease-out) 1.8s forwards;
     }
+
     .hero-scroll-line {
       width: 1px;
       height: 40px;
       background: linear-gradient(to bottom, var(--gold-400), transparent);
       animation: scrollBounce 2s ease-in-out infinite;
     }
-    @keyframes fadeUp { to { opacity: 1; transform: translateY(0); } }
-    @keyframes scrollBounce { 0%, 100% { transform: translateY(0); opacity: 1; } 50% { transform: translateY(8px); opacity: 0.5; } }
+
+    @keyframes fadeUp {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes scrollBounce {
+
+      0%,
+      100% {
+        transform: translateY(0);
+        opacity: 1;
+      }
+
+      50% {
+        transform: translateY(8px);
+        opacity: 0.5;
+      }
+    }
+
     .hero-decoration {
       position: absolute;
       right: -5%;
@@ -194,7 +244,12 @@
       z-index: 0;
       opacity: 0.06;
     }
-    .hero-decoration circle { fill: none; stroke: var(--gold-400); stroke-width: 0.5; }
+
+    .hero-decoration circle {
+      fill: none;
+      stroke: var(--gold-400);
+      stroke-width: 0.5;
+    }
 
     /* Philosophy */
     .philosophy-text {
@@ -207,7 +262,9 @@
       text-align: center;
       font-style: italic;
     }
-    .philosophy-text::before, .philosophy-text::after {
+
+    .philosophy-text::before,
+    .philosophy-text::after {
       content: '';
       display: block;
       width: 48px;
@@ -222,6 +279,7 @@
       grid-template-columns: repeat(4, 1fr);
       gap: var(--space-5);
     }
+
     .segment-home-card {
       background: var(--white);
       border: 1px solid var(--ivory-200);
@@ -230,11 +288,13 @@
       text-align: center;
       transition: all var(--duration-normal) var(--ease-default);
     }
+
     .segment-home-card:hover {
       transform: translateY(-4px);
       box-shadow: var(--shadow-lg);
       border-color: var(--gold-300);
     }
+
     .segment-home-icon {
       width: 48px;
       height: 48px;
@@ -247,16 +307,19 @@
       color: var(--gold-500);
       transition: all var(--duration-normal) var(--ease-default);
     }
+
     .segment-home-card:hover .segment-home-icon {
       background: linear-gradient(135deg, var(--gold-500), var(--gold-400));
       color: var(--white);
     }
+
     .segment-home-card .segment-name {
       font-family: var(--font-display);
       font-size: var(--heading-sm);
       color: var(--navy-900);
       margin-bottom: var(--space-2);
     }
+
     .segment-home-card .segment-brief {
       font-size: var(--body-sm);
       color: var(--charcoal-500);
@@ -271,6 +334,7 @@
       max-width: 800px;
       margin: 0 auto;
     }
+
     .leadership-photo {
       width: 240px;
       height: 300px;
@@ -283,47 +347,115 @@
       position: relative;
       overflow: hidden;
     }
+
     .leadership-photo::before {
       content: '';
       position: absolute;
       inset: 0;
       background: radial-gradient(circle at 50% 30%, rgba(184, 150, 90, 0.1), transparent 60%);
     }
+
     .leadership-photo-initials {
       font-family: var(--font-display);
       font-size: 4rem;
       color: rgba(255, 255, 255, 0.15);
     }
-    .leadership-info .leadership-overline { color: var(--gold-500); margin-bottom: var(--space-3); }
-    .leadership-info .leadership-name { font-family: var(--font-display); font-size: var(--heading-lg); color: var(--navy-900); margin-bottom: var(--space-2); }
-    .leadership-info .leadership-title-text { font-size: var(--body-md); color: var(--gold-500); margin-bottom: var(--space-4); }
-    .leadership-info .leadership-bio { font-size: var(--body-md); color: var(--charcoal-600); line-height: 1.7; margin-bottom: var(--space-5); }
+
+    .leadership-info .leadership-overline {
+      color: var(--gold-500);
+      margin-bottom: var(--space-3);
+    }
+
+    .leadership-info .leadership-name {
+      font-family: var(--font-display);
+      font-size: var(--heading-lg);
+      color: var(--navy-900);
+      margin-bottom: var(--space-2);
+    }
+
+    .leadership-info .leadership-title-text {
+      font-size: var(--body-md);
+      color: var(--gold-500);
+      margin-bottom: var(--space-4);
+    }
+
+    .leadership-info .leadership-bio {
+      font-size: var(--body-md);
+      color: var(--charcoal-600);
+      line-height: 1.7;
+      margin-bottom: var(--space-5);
+    }
 
     /* Testimonial section (improved) */
-    .testimonial-section { background: var(--ivory-100); position: relative; }
-    .testimonial-section::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 1px; background: linear-gradient(90deg, transparent, var(--gold-300), transparent); }
-    .testimonial-quote-mark { font-family: var(--font-display); font-size: 6rem; color: var(--gold-300); line-height: 0.5; margin-bottom: var(--space-5); text-align: center; }
+    .testimonial-section {
+      background: var(--ivory-100);
+      position: relative;
+    }
+
+    .testimonial-section::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, var(--gold-300), transparent);
+    }
+
+    .testimonial-quote-mark {
+      font-family: var(--font-display);
+      font-size: 6rem;
+      color: var(--gold-300);
+      line-height: 0.5;
+      margin-bottom: var(--space-5);
+      text-align: center;
+    }
 
     @media (max-width: 1024px) {
-      .segments-home-grid { grid-template-columns: repeat(2, 1fr); }
-      .leadership-preview { flex-direction: column; text-align: center; }
+      .segments-home-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .leadership-preview {
+        flex-direction: column;
+        text-align: center;
+      }
     }
+
     @media (max-width: 768px) {
-      .hero-content { padding: 120px 0 80px; }
-      .hero-title { font-size: var(--display-lg); }
-      .hero-scroll { display: none; }
-      .segments-home-grid { grid-template-columns: 1fr; }
-      .leadership-photo { width: 200px; height: 250px; }
+      .hero-content {
+        padding: 120px 0 80px;
+      }
+
+      .hero-title {
+        font-size: var(--display-lg);
+      }
+
+      .hero-scroll {
+        display: none;
+      }
+
+      .segments-home-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .leadership-photo {
+        width: 200px;
+        height: 250px;
+      }
     }
   </style>
 </head>
+
 <body>
   <a href="#main" class="skip-link">Skip to main content</a>
 
   <!-- Loading Screen -->
   <div class="loading-screen" id="loadingScreen">
     <div class="loading-logo">TH</div>
-    <div class="loading-bar"><div class="loading-bar-fill"></div></div>
+    <div class="loading-bar">
+      <div class="loading-bar-fill"></div>
+    </div>
   </div>
 
   <!-- Navigation -->
@@ -380,29 +512,46 @@
       </div>
       <!-- Floating Particles -->
       <div class="particles-container" aria-hidden="true">
-        <div class="particle"></div><div class="particle"></div><div class="particle"></div><div class="particle"></div>
-        <div class="particle"></div><div class="particle"></div><div class="particle"></div><div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
       </div>
       <!-- Animated Decoration Lines -->
       <div class="hero-lines" aria-hidden="true">
-        <div class="line"></div><div class="line"></div><div class="line"></div><div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
       </div>
       <svg class="hero-decoration" viewBox="0 0 500 500" aria-hidden="true">
-        <circle cx="250" cy="250" r="200"/><circle cx="250" cy="250" r="160"/><circle cx="250" cy="250" r="120"/><circle cx="250" cy="250" r="80"/>
+        <circle cx="250" cy="250" r="200" />
+        <circle cx="250" cy="250" r="160" />
+        <circle cx="250" cy="250" r="120" />
+        <circle cx="250" cy="250" r="80" />
       </svg>
       <div class="container">
         <div class="hero-content">
           <p class="overline hero-overline">Independent Wealth Management & Advisory</p>
           <h1 class="hero-title" id="heroTitle">
-            <span class="word-wrapper"><span class="word gradient-text" style="animation-delay: 0.2s;">Protecting</span></span>
-            <span class="word-wrapper"><span class="word gradient-text" style="animation-delay: 0.35s;">and</span></span>
-            <span class="word-wrapper"><span class="word gradient-text" style="animation-delay: 0.5s;">Growing</span></span>
-            <span class="word-wrapper"><span class="word gradient-text" style="animation-delay: 0.65s;">Wealth</span></span>
+            <span class="word-wrapper"><span class="word gradient-text"
+                style="animation-delay: 0.2s;">Protecting</span></span>
+            <span class="word-wrapper"><span class="word gradient-text"
+                style="animation-delay: 0.35s;">and</span></span>
+            <span class="word-wrapper"><span class="word gradient-text"
+                style="animation-delay: 0.5s;">Growing</span></span>
+            <span class="word-wrapper"><span class="word gradient-text"
+                style="animation-delay: 0.65s;">Wealth</span></span>
             <br>
             <span class="word-wrapper"><span class="word" style="animation-delay: 0.85s;">Across</span></span>
             <span class="word-wrapper"><span class="word" style="animation-delay: 1.0s;">Generations</span></span>
           </h1>
-          <p class="hero-subtitle">Tucker Hamberg is a trusted wealth management partner for individuals, families, and institutions seeking personalised, independent, and forward-looking financial guidance.</p>
+          <p class="hero-subtitle">Tucker Hamberg is a trusted wealth management partner for individuals, families, and
+            institutions seeking personalised, independent, and forward-looking financial guidance.</p>
           <div class="hero-buttons">
             <a href="services.html" class="btn btn-dark-primary btn-lg btn-pulse shimmer">Explore Our Services</a>
             <a href="contact.html" class="btn btn-dark-secondary btn-lg">Schedule a Consultation</a>
@@ -434,17 +583,20 @@
           <div class="stat-card reveal reveal-delay-1">
             <div class="stat-number" data-counter data-target="25" data-suffix="+">0+</div>
             <div class="stat-label">Years of Excellence</div>
-            <div class="stat-description">Decades of guiding clients through every market cycle with consistency and care.</div>
+            <div class="stat-description">Decades of guiding clients through every market cycle with consistency and
+              care.</div>
           </div>
           <div class="stat-card reveal reveal-delay-2">
             <div class="stat-number" data-counter data-target="12" data-prefix="$" data-suffix="B+">$0B+</div>
             <div class="stat-label">Assets Under Management</div>
-            <div class="stat-description">A reflection of the trust our clients place in our judgment and stewardship.</div>
+            <div class="stat-description">A reflection of the trust our clients place in our judgment and stewardship.
+            </div>
           </div>
           <div class="stat-card reveal reveal-delay-3">
             <div class="stat-number" data-counter data-target="500" data-suffix="+">0+</div>
             <div class="stat-label">Client Families</div>
-            <div class="stat-description">A diverse, global community of individuals and institutions we are proud to serve.</div>
+            <div class="stat-description">A diverse, global community of individuals and institutions we are proud to
+              serve.</div>
           </div>
           <div class="stat-card reveal reveal-delay-4">
             <div class="stat-number" data-counter data-target="98" data-suffix="%">0%</div>
@@ -461,7 +613,10 @@
     <section class="section" aria-label="Our philosophy">
       <div class="container">
         <div class="reveal">
-          <p class="philosophy-text">At Tucker Hamberg, we believe that true wealth management goes beyond returns. It is about understanding what matters most to you — your family, your legacy, your ambitions — and building a financial strategy that reflects those values. We are not just advisors; we are long-term partners in your journey.</p>
+          <p class="philosophy-text">At Tucker Hamberg, we believe that true wealth management goes beyond returns. It
+            is about understanding what matters most to you — your family, your legacy, your ambitions — and building a
+            financial strategy that reflects those values. We are not just advisors; we are long-term partners in your
+            journey.</p>
         </div>
       </div>
     </section>
@@ -472,43 +627,82 @@
         <div class="section-header text-center reveal">
           <p class="overline section-overline">What We Do</p>
           <h2 class="section-title display-md">Comprehensive Wealth Solutions</h2>
-          <p class="section-subtitle">A fully integrated suite of services designed to manage every dimension of your financial world.</p>
+          <p class="section-subtitle">A fully integrated suite of services designed to manage every dimension of your
+            financial world.</p>
         </div>
         <div class="grid grid-3">
           <div class="card card-service reveal reveal-delay-1">
-            <div class="card-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 7 13.5 15.5 8.5 10.5 2 17"/><polyline points="16 7 22 7 22 13"/></svg></div>
+            <div class="card-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="22 7 13.5 15.5 8.5 10.5 2 17" />
+                <polyline points="16 7 22 7 22 13" />
+              </svg></div>
             <h3 class="card-title">Investment Management</h3>
-            <p class="card-text">Disciplined portfolio construction built around your specific goals, time horizon, and risk tolerance.</p>
+            <p class="card-text">Disciplined portfolio construction built around your specific goals, time horizon, and
+              risk tolerance.</p>
             <a href="services.html#investment" class="card-link">Learn More <span class="btn-arrow">→</span></a>
           </div>
           <div class="card card-service reveal reveal-delay-2">
-            <div class="card-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18"/><path d="M9 21V9"/></svg></div>
+            <div class="card-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="3" y="3" width="18" height="18" rx="2" />
+                <path d="M3 9h18" />
+                <path d="M9 21V9" />
+              </svg></div>
             <h3 class="card-title">Wealth Planning & Structuring</h3>
-            <p class="card-text">A blueprint for every stage of life — from building wealth to preserving it across generations.</p>
+            <p class="card-text">A blueprint for every stage of life — from building wealth to preserving it across
+              generations.</p>
             <a href="services.html#wealth-planning" class="card-link">Learn More <span class="btn-arrow">→</span></a>
           </div>
           <div class="card card-service reveal reveal-delay-3">
-            <div class="card-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
+            <div class="card-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+              </svg></div>
             <h3 class="card-title">Estate & Legacy Planning</h3>
-            <p class="card-text">Secure your legacy on your terms — minimising friction and honouring your wishes across generations.</p>
+            <p class="card-text">Secure your legacy on your terms — minimising friction and honouring your wishes across
+              generations.</p>
             <a href="services.html#estate" class="card-link">Learn More <span class="btn-arrow">→</span></a>
           </div>
-          <div class="card card-service reveal reveal-delay-4">
-            <div class="card-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg></div>
+
+
+
+          <!-- <div class="card card-service reveal reveal-delay-4">
+            <div class="card-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z" />
+                <polyline points="9 22 9 12 15 12 15 22" />
+              </svg></div>
             <h3 class="card-title">Family Office Services</h3>
-            <p class="card-text">The ultimate in comprehensive wealth oversight — financial management, reporting, and advisory under one roof.</p>
+            <p class="card-text">The ultimate in comprehensive wealth oversight — financial management, reporting, and
+              advisory under one roof.</p>
             <a href="services.html#family-office" class="card-link">Learn More <span class="btn-arrow">→</span></a>
-          </div>
+          </div> -->
+          
+          
+          
           <div class="card card-service reveal reveal-delay-5">
-            <div class="card-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="2" width="16" height="20" rx="2"/><line x1="8" y1="6" x2="16" y2="6"/><line x1="8" y1="10" x2="16" y2="10"/><line x1="8" y1="14" x2="12" y2="14"/></svg></div>
+            <div class="card-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="4" y="2" width="16" height="20" rx="2" />
+                <line x1="8" y1="6" x2="16" y2="6" />
+                <line x1="8" y1="10" x2="16" y2="10" />
+                <line x1="8" y1="14" x2="12" y2="14" />
+              </svg></div>
             <h3 class="card-title">Tax Advisory</h3>
-            <p class="card-text">Smarter wealth means smarter tax planning — helping you retain more of what you earn while staying compliant.</p>
+            <p class="card-text">Smarter wealth means smarter tax planning — helping you retain more of what you earn
+              while staying compliant.</p>
             <a href="services.html#tax" class="card-link">Learn More <span class="btn-arrow">→</span></a>
           </div>
           <div class="card card-service reveal reveal-delay-6">
-            <div class="card-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/></svg></div>
+            <div class="card-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                <path
+                  d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z" />
+              </svg></div>
             <h3 class="card-title">Philanthropy Advisory</h3>
-            <p class="card-text">Give with purpose, give with impact — designing meaningful philanthropic strategies aligned with your values.</p>
+            <p class="card-text">Give with purpose, give with impact — designing meaningful philanthropic strategies
+              aligned with your values.</p>
             <a href="services.html#philanthropy" class="card-link">Learn More <span class="btn-arrow">→</span></a>
           </div>
         </div>
@@ -531,55 +725,103 @@
         </div>
         <div class="grid grid-4">
           <div class="card-differentiator reveal reveal-delay-1">
-            <div class="diff-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="M9 12l2 2 4-4"/></svg></div>
+            <div class="diff-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                stroke-width="1.5">
+                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+                <path d="M9 12l2 2 4-4" />
+              </svg></div>
             <h3 class="diff-title">Independent & Objective</h3>
             <p class="diff-text">Free from institutional conflicts — our only obligation is to you.</p>
           </div>
           <div class="card-differentiator reveal reveal-delay-2">
-            <div class="diff-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"/><circle cx="12" cy="7" r="4"/></svg></div>
+            <div class="diff-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                stroke-width="1.5">
+                <path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2" />
+                <circle cx="12" cy="7" r="4" />
+              </svg></div>
             <h3 class="diff-title">Personalised Approach</h3>
             <p class="diff-text">No two clients are the same. Every strategy is built around your unique goals.</p>
           </div>
           <div class="card-differentiator reveal reveal-delay-3">
-            <div class="diff-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 014 10 15.3 15.3 0 01-4 10 15.3 15.3 0 01-4-10 15.3 15.3 0 014-10z"/></svg></div>
+            <div class="diff-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                stroke-width="1.5">
+                <circle cx="12" cy="12" r="10" />
+                <line x1="2" y1="12" x2="22" y2="12" />
+                <path d="M12 2a15.3 15.3 0 014 10 15.3 15.3 0 01-4 10 15.3 15.3 0 01-4-10 15.3 15.3 0 014-10z" />
+              </svg></div>
             <h3 class="diff-title">Global Perspective</h3>
             <p class="diff-text">Access to worldwide investment opportunities with local sensitivity.</p>
           </div>
           <div class="card-differentiator reveal reveal-delay-4">
-            <div class="diff-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></div>
+            <div class="diff-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                stroke-width="1.5">
+                <circle cx="12" cy="12" r="10" />
+                <polyline points="12 6 12 12 16 14" />
+              </svg></div>
             <h3 class="diff-title">Multi-Generational Focus</h3>
             <p class="diff-text">We plan not just for your lifetime, but for the generations that follow.</p>
           </div>
         </div>
-        <div class="text-center mt-7 reveal"><a href="why-us.html" class="btn btn-secondary">Discover What Sets Us Apart</a></div>
+        <div class="text-center mt-7 reveal"><a href="why-us.html" class="btn btn-secondary">Discover What Sets Us
+            Apart</a></div>
       </div>
     </section>
 
     <!-- ===================== INSIGHTS + INLINE LEAD CAPTURE ===================== -->
-    <section class="section" aria-label="Latest insights">
+    <!-- <section class="section" aria-label="Latest insights">
       <div class="container">
         <div class="section-header text-center reveal">
           <p class="overline section-overline">Insights</p>
           <h2 class="section-title display-md">Thought Leadership & Market Commentary</h2>
-          <p class="section-subtitle">Stay informed with our latest perspectives on markets, wealth strategy, and financial planning.</p>
+          <p class="section-subtitle">Stay informed with our latest perspectives on markets, wealth strategy, and
+            financial planning.</p>
         </div>
         <div class="grid grid-3">
           <article class="card card-insight reveal reveal-delay-1">
-            <div class="insight-image-wrapper"><div class="insight-image" style="height: 200px; overflow: hidden;"><img src="images/insight-markets.png" alt="Global markets outlook" loading="lazy" style="width: 100%; height: 100%; object-fit: cover;"></div></div>
-            <div class="insight-body"><span class="insight-tag">Market Outlook</span><h3 class="insight-title">Navigating Volatility: Our Perspective on Global Markets in 2026</h3><p class="insight-excerpt">How we position portfolios to weather uncertainty while capturing long-term growth opportunities.</p><span class="insight-date">May 2026</span></div>
+            <div class="insight-image-wrapper">
+              <div class="insight-image" style="height: 200px; overflow: hidden;"><img src="images/insight-markets.png"
+                  alt="Global markets outlook" loading="lazy" style="width: 100%; height: 100%; object-fit: cover;">
+              </div>
+            </div>
+            <div class="insight-body"><span class="insight-tag">Market Outlook</span>
+              <h3 class="insight-title">Navigating Volatility: Our Perspective on Global Markets in 2026</h3>
+              <p class="insight-excerpt">How we position portfolios to weather uncertainty while capturing long-term
+                growth opportunities.</p><span class="insight-date">May 2026</span>
+            </div>
           </article>
           <article class="card card-insight reveal reveal-delay-2">
-            <div class="insight-image-wrapper"><div class="insight-image" style="height: 200px; overflow: hidden;"><img src="images/insight-wealth.png" alt="Wealth transfer strategies" loading="lazy" style="width: 100%; height: 100%; object-fit: cover;"></div></div>
-            <div class="insight-body"><span class="insight-tag">Wealth Planning</span><h3 class="insight-title">The Five Pillars of Multi-Generational Wealth Transfer</h3><p class="insight-excerpt">Essential strategies for families seeking to preserve and grow wealth across generations.</p><span class="insight-date">April 2026</span></div>
+            <div class="insight-image-wrapper">
+              <div class="insight-image" style="height: 200px; overflow: hidden;"><img src="images/insight-wealth.png"
+                  alt="Wealth transfer strategies" loading="lazy" style="width: 100%; height: 100%; object-fit: cover;">
+              </div>
+            </div>
+            <div class="insight-body"><span class="insight-tag">Wealth Planning</span>
+              <h3 class="insight-title">The Five Pillars of Multi-Generational Wealth Transfer</h3>
+              <p class="insight-excerpt">Essential strategies for families seeking to preserve and grow wealth across
+                generations.</p><span class="insight-date">April 2026</span>
+            </div>
           </article>
           <article class="card card-insight reveal reveal-delay-3">
-            <div class="insight-image-wrapper"><div class="insight-image" style="height: 200px; overflow: hidden;"><img src="images/insight-tax.png" alt="Cross-border tax planning" loading="lazy" style="width: 100%; height: 100%; object-fit: cover;"></div></div>
-            <div class="insight-body"><span class="insight-tag">Tax Strategy</span><h3 class="insight-title">Cross-Border Tax Planning: What Internationally Mobile Clients Need to Know</h3><p class="insight-excerpt">Navigating complex tax obligations when your life and assets span multiple jurisdictions.</p><span class="insight-date">March 2026</span></div>
+            <div class="insight-image-wrapper">
+              <div class="insight-image" style="height: 200px; overflow: hidden;"><img src="images/insight-tax.png"
+                  alt="Cross-border tax planning" loading="lazy" style="width: 100%; height: 100%; object-fit: cover;">
+              </div>
+            </div>
+            <div class="insight-body"><span class="insight-tag">Tax Strategy</span>
+              <h3 class="insight-title">Cross-Border Tax Planning: What Internationally Mobile Clients Need to Know</h3>
+              <p class="insight-excerpt">Navigating complex tax obligations when your life and assets span multiple
+                jurisdictions.</p><span class="insight-date">March 2026</span>
+            </div>
           </article>
         </div>
-        <!-- Inline Lead Capture (Reciprocity Principle) -->
         <div class="lead-capture mt-7 reveal">
-          <div class="lead-capture-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg></div>
+          <div class="lead-capture-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="1.5">
+              <path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z" />
+              <polyline points="14 2 14 8 20 8" />
+              <line x1="16" y1="13" x2="8" y2="13" />
+              <line x1="16" y1="17" x2="8" y2="17" />
+            </svg></div>
           <div class="lead-capture-content">
             <h3>Download: The 10 Questions Every HNW Individual Should Ask Their Wealth Manager</h3>
             <p>Our complimentary guide to evaluating and selecting the right financial partner.</p>
@@ -587,7 +829,7 @@
           <a href="contact.html" class="btn btn-dark-primary btn-sm">Download Free Guide</a>
         </div>
       </div>
-    </section>
+    </section> -->
 
     <!-- ===================== TESTIMONIAL CAROUSEL (Social Proof with Persona Tags) ===================== -->
     <section class="section testimonial-section" aria-label="Client testimonials">
@@ -601,26 +843,38 @@
           <div class="testimonial-track" id="testimonialTrack">
             <div class="testimonial-slide">
               <span class="t-tag">Family Office Client</span>
-              <p class="t-quote">Tucker Hamberg has been instrumental in helping our family think clearly about our financial future. Their advice is always considered, patient, and deeply personal.</p>
+              <p class="t-quote">Tucker Hamberg has been instrumental in helping our family think clearly about our
+                financial future. Their advice is always considered, patient, and deeply personal.</p>
               <div class="t-meta">
                 <div class="t-avatar">MR</div>
-                <div class="t-info"><p class="t-name">Private Client</p><p class="t-detail">12-year relationship · Family Office</p></div>
+                <div class="t-info">
+                  <p class="t-name">Private Client</p>
+                  <p class="t-detail">12-year relationship · Family Office</p>
+                </div>
               </div>
             </div>
             <div class="testimonial-slide">
               <span class="t-tag">Entrepreneur</span>
-              <p class="t-quote">After selling my company, Tucker Hamberg helped me transition from business wealth to personal wealth with a strategy I could trust. Their independence is their greatest asset.</p>
+              <p class="t-quote">After selling my company, Tucker Hamberg helped me transition from business wealth to
+                personal wealth with a strategy I could trust. Their independence is their greatest asset.</p>
               <div class="t-meta">
                 <div class="t-avatar">SK</div>
-                <div class="t-info"><p class="t-name">Former CEO & Founder</p><p class="t-detail">8-year relationship · Post-Exit Planning</p></div>
+                <div class="t-info">
+                  <p class="t-name">Former CEO & Founder</p>
+                  <p class="t-detail">8-year relationship · Post-Exit Planning</p>
+                </div>
               </div>
             </div>
             <div class="testimonial-slide">
               <span class="t-tag">Institutional Investor</span>
-              <p class="t-quote">The level of rigour and transparency Tucker Hamberg brings to our foundation's investment strategy is exceptional. They treat our endowment as if it were their own.</p>
+              <p class="t-quote">The level of rigour and transparency Tucker Hamberg brings to our foundation's
+                investment strategy is exceptional. They treat our endowment as if it were their own.</p>
               <div class="t-meta">
                 <div class="t-avatar">DR</div>
-                <div class="t-info"><p class="t-name">Foundation Director</p><p class="t-detail">6-year relationship · Endowment Management</p></div>
+                <div class="t-info">
+                  <p class="t-name">Foundation Director</p>
+                  <p class="t-detail">6-year relationship · Endowment Management</p>
+                </div>
               </div>
             </div>
           </div>
@@ -643,7 +897,8 @@
           Next available consultation: Within 48 hours
         </div>
         <h2 class="cta-title reveal">Ready to Take Control of Your Financial Future?</h2>
-        <p class="cta-subtitle reveal reveal-delay-1">Let's start a conversation. There is no obligation — just an honest discussion about your goals and how we might help.</p>
+        <p class="cta-subtitle reveal reveal-delay-1">Let's start a conversation. There is no obligation — just an
+          honest discussion about your goals and how we might help.</p>
         <a href="contact.html" class="btn btn-dark-primary btn-lg reveal reveal-delay-2">Book a Consultation</a>
         <div class="social-proof-ticker reveal reveal-delay-3" style="margin-top: var(--space-5);">
           <div class="social-proof-avatars">
@@ -663,34 +918,48 @@
     <div class="container">
       <div class="footer-grid">
         <div class="footer-brand">
-          <div class="footer-logo"><div class="footer-logo-mark">TH</div><div class="footer-logo-text">Tucker Hamberg<span>Wealth Management</span></div></div>
-          <p class="footer-desc">An independent wealth management firm dedicated to protecting and growing wealth across generations. We provide personalised, objective financial guidance to individuals, families, and institutions worldwide.</p>
+          <div class="footer-logo">
+            <div class="footer-logo-mark">TH</div>
+            <div class="footer-logo-text">Tucker Hamberg<span>Wealth Management</span></div>
+          </div>
+          <p class="footer-desc">An independent wealth management firm dedicated to protecting and growing wealth across
+            generations. We provide personalised, objective financial guidance to individuals, families, and
+            institutions worldwide.</p>
         </div>
         <div class="footer-column">
           <h3 class="footer-heading">Company</h3>
-          <a href="about.html">About Us</a><a href="about.html#team">Leadership</a><a href="about.html#values">Our Values</a><a href="why-us.html">Why Choose Us</a><a href="who-we-serve.html">Who We Serve</a>
+          <a href="about.html">About Us</a><a href="about.html#team">Leadership</a><a href="about.html#values">Our
+            Values</a><a href="why-us.html">Why Choose Us</a><a href="who-we-serve.html">Who We Serve</a>
         </div>
         <div class="footer-column">
           <h3 class="footer-heading">Services</h3>
-          <a href="services.html#investment">Investment Management</a><a href="services.html#wealth-planning">Wealth Planning</a><a href="services.html#estate">Estate & Legacy</a><a href="services.html#family-office">Family Office</a><a href="services.html#tax">Tax Advisory</a><a href="services.html#philanthropy">Philanthropy</a>
+          <a href="services.html#investment">Investment Management</a><a href="services.html#wealth-planning">Wealth
+            Planning</a><a href="services.html#estate">Estate & Legacy</a><a href="services.html#family-office">Family
+            Office</a><a href="services.html#tax">Tax Advisory</a><a href="services.html#philanthropy">Philanthropy</a>
         </div>
         <div class="footer-column">
           <h3 class="footer-heading">Contact</h3>
-          <a href="contact.html">Get in Touch</a><a href="tel:+12345678900">+1 (234) 567-8900</a><a href="mailto:hello@tuckerhamberg.com">hello@tuckerhamberg.com</a><a href="#">Client Portal</a>
+          <a href="contact.html">Get in Touch</a><a href="tel:+12345678900">+1 (234) 567-8900</a><a
+            href="mailto:hello@tuckerhamberg.com">hello@tuckerhamberg.com</a><a href="#">Client Portal</a>
         </div>
       </div>
       <div class="footer-bottom">
         <p>&copy; 2026 Tucker Hamberg Wealth Management. All rights reserved.</p>
-        <div class="footer-bottom-links"><a href="privacy.html">Privacy Policy</a><a href="privacy.html#terms">Terms of Service</a><a href="privacy.html#disclosures">Disclosures</a></div>
+        <div class="footer-bottom-links"><a href="privacy.html">Privacy Policy</a><a href="privacy.html#terms">Terms of
+            Service</a><a href="privacy.html#disclosures">Disclosures</a></div>
       </div>
     </div>
   </footer>
 
   <!-- Back to Top -->
-  <button class="back-to-top" id="backToTop" aria-label="Back to top"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 15l-6-6-6 6"/></svg></button>
+  <button class="back-to-top" id="backToTop" aria-label="Back to top"><svg width="20" height="20" viewBox="0 0 24 24"
+      fill="none" stroke="currentColor" stroke-width="2">
+      <path d="M18 15l-6-6-6 6" />
+    </svg></button>
 
   <!-- Mobile Sticky CTA -->
-  <div class="mobile-sticky-cta"><a href="contact.html" class="btn btn-dark-primary btn-sm">Book a Consultation</a></div>
+  <div class="mobile-sticky-cta"><a href="contact.html" class="btn btn-dark-primary btn-sm">Book a Consultation</a>
+  </div>
 
   <!-- ===================== EXIT INTENT MODAL (Loss Aversion + Reciprocity) ===================== -->
   <div class="exit-modal-overlay" id="exitModal">
@@ -698,21 +967,32 @@
       <div class="exit-modal-header">
         <p class="overline modal-overline">Before You Go</p>
         <h3 class="modal-title">Download Our Complimentary Wealth Planning Guide</h3>
-        <button class="exit-modal-close" id="exitModalClose" aria-label="Close modal"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></button>
+        <button class="exit-modal-close" id="exitModalClose" aria-label="Close modal"><svg width="20" height="20"
+            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <line x1="18" y1="6" x2="6" y2="18" />
+            <line x1="6" y1="6" x2="18" y2="18" />
+          </svg></button>
       </div>
       <div class="exit-modal-body" id="exitModalBody">
-        <p><strong>The 10 Questions Every High-Net-Worth Individual Should Ask Their Wealth Manager</strong> — a practical guide to evaluating your current advisor and understanding what best-in-class wealth management looks like.</p>
+        <p><strong>The 10 Questions Every High-Net-Worth Individual Should Ask Their Wealth Manager</strong> — a
+          practical guide to evaluating your current advisor and understanding what best-in-class wealth management
+          looks like.</p>
         <div class="exit-modal-form" id="exitForm">
           <input type="email" id="exitEmail" placeholder="Enter your email address" aria-label="Email address">
           <button class="btn btn-primary btn-sm" id="exitSubmit">Send Guide</button>
         </div>
         <div class="exit-modal-privacy">
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+          </svg>
           We respect your privacy. Unsubscribe at any time.
         </div>
       </div>
       <div class="exit-modal-success" id="exitSuccess" style="display:none;">
-        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+          <path d="M22 11.08V12a10 10 0 11-5.93-9.14" />
+          <polyline points="22 4 12 14.01 9 11.01" />
+        </svg>
         <h3>Check Your Inbox</h3>
         <p>Your guide is on its way. We look forward to helping you on your wealth journey.</p>
       </div>
@@ -857,164 +1137,165 @@
 
   <!-- Premium Animation Engine -->
   <script>
-  (function() {
-    // ---- Hero Slideshow ----
-    const slides = document.querySelectorAll('.hero-slide');
-    const heroDots = document.querySelectorAll('.hero-dot');
-    let currentHeroSlide = 0;
-    let heroSlideInterval;
+    (function () {
+      // ---- Hero Slideshow ----
+      const slides = document.querySelectorAll('.hero-slide');
+      const heroDots = document.querySelectorAll('.hero-dot');
+      let currentHeroSlide = 0;
+      let heroSlideInterval;
 
-    function showHeroSlide(index) {
-      slides.forEach((slide, i) => {
-        slide.classList.toggle('active', i === index);
+      function showHeroSlide(index) {
+        slides.forEach((slide, i) => {
+          slide.classList.toggle('active', i === index);
+        });
+        heroDots.forEach((dot, i) => {
+          dot.classList.toggle('active', i === index);
+        });
+        currentHeroSlide = index;
+      }
+
+      function nextHeroSlide() {
+        showHeroSlide((currentHeroSlide + 1) % slides.length);
+      }
+
+      function startHeroSlideshow() {
+        clearInterval(heroSlideInterval);
+        heroSlideInterval = setInterval(nextHeroSlide, 6000);
+      }
+
+      heroDots.forEach(dot => {
+        dot.addEventListener('click', () => {
+          const index = parseInt(dot.getAttribute('data-slide'));
+          showHeroSlide(index);
+          startHeroSlideshow();
+        });
       });
-      heroDots.forEach((dot, i) => {
-        dot.classList.toggle('active', i === index);
-      });
-      currentHeroSlide = index;
-    }
 
-    function nextHeroSlide() {
-      showHeroSlide((currentHeroSlide + 1) % slides.length);
-    }
-
-    function startHeroSlideshow() {
-      clearInterval(heroSlideInterval);
-      heroSlideInterval = setInterval(nextHeroSlide, 6000);
-    }
-
-    heroDots.forEach(dot => {
-      dot.addEventListener('click', () => {
-        const index = parseInt(dot.getAttribute('data-slide'));
-        showHeroSlide(index);
+      if (slides.length > 0) {
         startHeroSlideshow();
-      });
-    });
+      }
 
-    if (slides.length > 0) {
-      startHeroSlideshow();
-    }
+      // ---- Scroll Progress Bar ----
+      const scrollProgressBar = document.getElementById('scrollProgress');
+      if (scrollProgressBar) {
+        window.addEventListener('scroll', () => {
+          const scrollTop = window.scrollY;
+          const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+          const scrollPercent = (scrollTop / docHeight) * 100;
+          scrollProgressBar.style.width = scrollPercent + '%';
+        }, { passive: true });
+      }
 
-    // ---- Scroll Progress Bar ----
-    const scrollProgressBar = document.getElementById('scrollProgress');
-    if (scrollProgressBar) {
-      window.addEventListener('scroll', () => {
-        const scrollTop = window.scrollY;
-        const docHeight = document.documentElement.scrollHeight - window.innerHeight;
-        const scrollPercent = (scrollTop / docHeight) * 100;
-        scrollProgressBar.style.width = scrollPercent + '%';
-      }, { passive: true });
-    }
+      // ---- Parallax Hero Background ----
+      const hero = document.querySelector('.hero');
+      if (hero) {
+        window.addEventListener('scroll', () => {
+          const scrolled = window.scrollY;
+          if (scrolled < window.innerHeight) {
+            hero.style.setProperty('--parallax-offset', scrolled * 0.3 + 'px');
+            const decoration = hero.querySelector('.hero-decoration');
+            if (decoration) decoration.style.transform = `translate(-50%, calc(-50% + ${scrolled * 0.15}px)) rotate(${scrolled * 0.02}deg)`;
+          }
+        }, { passive: true });
+      }
 
-    // ---- Parallax Hero Background ----
-    const hero = document.querySelector('.hero');
-    if (hero) {
-      window.addEventListener('scroll', () => {
-        const scrolled = window.scrollY;
-        if (scrolled < window.innerHeight) {
-          hero.style.setProperty('--parallax-offset', scrolled * 0.3 + 'px');
-          const decoration = hero.querySelector('.hero-decoration');
-          if (decoration) decoration.style.transform = `translate(-50%, calc(-50% + ${scrolled * 0.15}px)) rotate(${scrolled * 0.02}deg)`;
-        }
-      }, { passive: true });
-    }
-
-    // ---- Typewriter Effect on Hero ----
-    const typewriterEl = document.querySelector('.hero-subtitle');
-    if (typewriterEl && !typewriterEl.dataset.typed) {
-      typewriterEl.dataset.typed = 'true';
-      const fullText = typewriterEl.textContent;
-      typewriterEl.textContent = '';
-      typewriterEl.classList.add('typewriter-cursor');
-      let charIdx = 0;
-      const heroObserver = new IntersectionObserver((entries) => {
-        if (entries[0].isIntersecting) {
-          heroObserver.disconnect();
-          setTimeout(() => {
-            const typeInterval = setInterval(() => {
-              if (charIdx < fullText.length) {
-                typewriterEl.textContent += fullText[charIdx];
-                charIdx++;
-              } else {
-                clearInterval(typeInterval);
-                setTimeout(() => typewriterEl.classList.remove('typewriter-cursor'), 2000);
-              }
-            }, 18);
-          }, 1800);
-        }
-      });
-      heroObserver.observe(typewriterEl);
-    }
-
-    // ---- Mouse-Move Tilt on Cards ----
-    document.querySelectorAll('.card-insight, .card-segment, .card-value').forEach(card => {
-      card.addEventListener('mousemove', (e) => {
-        const rect = card.getBoundingClientRect();
-        const x = (e.clientX - rect.left) / rect.width - 0.5;
-        const y = (e.clientY - rect.top) / rect.height - 0.5;
-        card.style.transform = `perspective(800px) rotateX(${-y * 6}deg) rotateY(${x * 6}deg) translateY(-6px) scale(1.02)`;
-      });
-      card.addEventListener('mouseleave', () => {
-        card.style.transform = '';
-        card.style.transition = 'transform 0.5s cubic-bezier(0.23, 1, 0.32, 1)';
-        setTimeout(() => card.style.transition = '', 500);
-      });
-    });
-
-    // ---- Counter Glow After Animation ----
-    document.querySelectorAll('[data-counter]').forEach(el => {
-      const obs = new IntersectionObserver((entries) => {
-        if (entries[0].isIntersecting) {
-          setTimeout(() => el.classList.add('counted'), 2200);
-          obs.disconnect();
-        }
-      }, { threshold: 0.5 });
-      obs.observe(el);
-    });
-
-    // ---- Staggered Reveal for Grids ----
-    document.querySelectorAll('.grid').forEach(grid => {
-      const cards = grid.querySelectorAll('.card, .stat-card, .award-item');
-      const gridObs = new IntersectionObserver((entries) => {
-        if (entries[0].isIntersecting) {
-          cards.forEach((card, i) => {
+      // ---- Typewriter Effect on Hero ----
+      const typewriterEl = document.querySelector('.hero-subtitle');
+      if (typewriterEl && !typewriterEl.dataset.typed) {
+        typewriterEl.dataset.typed = 'true';
+        const fullText = typewriterEl.textContent;
+        typewriterEl.textContent = '';
+        typewriterEl.classList.add('typewriter-cursor');
+        let charIdx = 0;
+        const heroObserver = new IntersectionObserver((entries) => {
+          if (entries[0].isIntersecting) {
+            heroObserver.disconnect();
             setTimeout(() => {
-              card.style.opacity = '1';
-              card.style.transform = 'translateY(0)';
-            }, i * 120);
+              const typeInterval = setInterval(() => {
+                if (charIdx < fullText.length) {
+                  typewriterEl.textContent += fullText[charIdx];
+                  charIdx++;
+                } else {
+                  clearInterval(typeInterval);
+                  setTimeout(() => typewriterEl.classList.remove('typewriter-cursor'), 2000);
+                }
+              }, 18);
+            }, 1800);
+          }
+        });
+        heroObserver.observe(typewriterEl);
+      }
+
+      // ---- Mouse-Move Tilt on Cards ----
+      document.querySelectorAll('.card-insight, .card-segment, .card-value').forEach(card => {
+        card.addEventListener('mousemove', (e) => {
+          const rect = card.getBoundingClientRect();
+          const x = (e.clientX - rect.left) / rect.width - 0.5;
+          const y = (e.clientY - rect.top) / rect.height - 0.5;
+          card.style.transform = `perspective(800px) rotateX(${-y * 6}deg) rotateY(${x * 6}deg) translateY(-6px) scale(1.02)`;
+        });
+        card.addEventListener('mouseleave', () => {
+          card.style.transform = '';
+          card.style.transition = 'transform 0.5s cubic-bezier(0.23, 1, 0.32, 1)';
+          setTimeout(() => card.style.transition = '', 500);
+        });
+      });
+
+      // ---- Counter Glow After Animation ----
+      document.querySelectorAll('[data-counter]').forEach(el => {
+        const obs = new IntersectionObserver((entries) => {
+          if (entries[0].isIntersecting) {
+            setTimeout(() => el.classList.add('counted'), 2200);
+            obs.disconnect();
+          }
+        }, { threshold: 0.5 });
+        obs.observe(el);
+      });
+
+      // ---- Staggered Reveal for Grids ----
+      document.querySelectorAll('.grid').forEach(grid => {
+        const cards = grid.querySelectorAll('.card, .stat-card, .award-item');
+        const gridObs = new IntersectionObserver((entries) => {
+          if (entries[0].isIntersecting) {
+            cards.forEach((card, i) => {
+              setTimeout(() => {
+                card.style.opacity = '1';
+                card.style.transform = 'translateY(0)';
+              }, i * 120);
+            });
+            gridObs.disconnect();
+          }
+        }, { threshold: 0.15 });
+        if (cards.length > 0) {
+          cards.forEach(c => {
+            c.style.opacity = '0';
+            c.style.transform = 'translateY(30px)';
+            c.style.transition = 'opacity 0.6s ease, transform 0.6s cubic-bezier(0.23, 1, 0.32, 1)';
           });
-          gridObs.disconnect();
+          gridObs.observe(grid);
         }
-      }, { threshold: 0.15 });
-      if (cards.length > 0) {
-        cards.forEach(c => {
-          c.style.opacity = '0';
-          c.style.transform = 'translateY(30px)';
-          c.style.transition = 'opacity 0.6s ease, transform 0.6s cubic-bezier(0.23, 1, 0.32, 1)';
-        });
-        gridObs.observe(grid);
-      }
-    });
+      });
 
-    // ---- Smooth Section Separator Animations ----
-    document.querySelectorAll('.section, .section-lg, .section-sm').forEach(section => {
-      section.style.position = 'relative';
-    });
+      // ---- Smooth Section Separator Animations ----
+      document.querySelectorAll('.section, .section-lg, .section-sm').forEach(section => {
+        section.style.position = 'relative';
+      });
 
-    // ---- Image Lazy Load with Fade-In ----
-    document.querySelectorAll('img[loading="lazy"]').forEach(img => {
-      img.style.opacity = '0';
-      img.style.transition = 'opacity 0.8s ease';
-      if (img.complete) {
-        img.style.opacity = '1';
-      } else {
-        img.addEventListener('load', () => {
+      // ---- Image Lazy Load with Fade-In ----
+      document.querySelectorAll('img[loading="lazy"]').forEach(img => {
+        img.style.opacity = '0';
+        img.style.transition = 'opacity 0.8s ease';
+        if (img.complete) {
           img.style.opacity = '1';
-        });
-      }
-    });
-  })();
+        } else {
+          img.addEventListener('load', () => {
+            img.style.opacity = '1';
+          });
+        }
+      });
+    })();
   </script>
 
 </body>
+
 </html>
