@@ -1,0 +1,834 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us — Tucker Hamberg Wealth Management</title>
+  <meta name="description" content="Schedule a private consultation with Tucker Hamberg Wealth Management. Whether you're ready to begin or simply exploring your options, we welcome your call.">
+  <link rel="canonical" href="https://tuckerhamberg.com/contact">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <a href="#main" class="skip-link">Skip to main content</a>
+
+  <!-- Loading Screen -->
+  <div class="loading-screen" id="loadingScreen">
+    <div class="loading-logo">TH</div>
+    <div class="loading-bar"><div class="loading-bar-fill"></div></div>
+  </div>
+
+  <!-- Navigation -->
+  <nav class="navbar" id="navbar" role="navigation" aria-label="Main navigation">
+    <div class="navbar-inner">
+      <a href="index.html" class="navbar-logo" aria-label="Tucker Hamberg - Home">
+        <div class="navbar-logo-mark">TH</div>
+        <div class="navbar-logo-text">Tucker Hamberg<span>Wealth Management</span></div>
+      </a>
+      <div class="navbar-links">
+        <a href="about.html">About</a>
+        <a href="services.html">Services</a>
+        <a href="who-we-serve.html">Who We Serve</a>
+        <a href="why-us.html">Why Choose Us</a>
+        <a href="contact.html" class="active">Contact</a>
+      </div>
+      <div class="navbar-cta">
+        <a href="contact.html" class="btn btn-primary btn-sm">Schedule Consultation</a>
+      </div>
+      <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Mobile Menu -->
+  <div class="mobile-menu" id="mobileMenu" role="dialog" aria-label="Mobile navigation">
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="services.html">Services</a>
+    <a href="who-we-serve.html">Who We Serve</a>
+    <a href="why-us.html">Why Choose Us</a>
+    <a href="contact.html">Contact</a>
+    <a href="contact.html" class="btn btn-dark-primary">Schedule Consultation</a>
+  </div>
+
+  <!-- Main Content -->
+  <main id="main">
+    <div class="scroll-progress" id="scrollProgress"></div>
+
+    <!-- Page Hero -->
+    <section class="page-hero page-hero--contact">
+      <div class="container">
+        <p class="overline page-overline reveal">Get in Touch</p>
+        <h1 class="page-title display-lg reveal">Let's Begin a Conversation</h1>
+        <p class="page-subtitle body-lg reveal">Whether you are ready to get started or simply want to explore whether Tucker Hamberg is the right fit, we welcome your call. There is no obligation — just an honest conversation about your goals and how we might be able to help.</p>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="section-lg">
+      <div class="container">
+        <div class="contact-layout">
+
+          <!-- Left: Multi-Step Contact Form -->
+          <div class="contact-form-wrapper reveal-left" id="formWrapper">
+            <h2 class="heading-lg mb-5" style="font-family: var(--font-display); color: var(--navy-900);">Schedule Your Consultation</h2>
+            <p class="body-sm text-muted mb-6">All enquiries are treated with the utmost confidentiality. Complete the steps below and a member of our advisory team will respond within one business day.</p>
+
+            <!-- Progress Bar -->
+            <div class="form-progress" id="formProgress">
+              <div class="form-progress-step active" data-step="1">
+                <div class="form-progress-circle">
+                  <span class="form-progress-number">1</span>
+                  <svg class="form-progress-check" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>
+                </div>
+                <span class="form-progress-label">Your Details</span>
+              </div>
+              <div class="form-progress-line" data-line="1"></div>
+              <div class="form-progress-step" data-step="2">
+                <div class="form-progress-circle">
+                  <span class="form-progress-number">2</span>
+                  <svg class="form-progress-check" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>
+                </div>
+                <span class="form-progress-label">Your Profile</span>
+              </div>
+              <div class="form-progress-line" data-line="2"></div>
+              <div class="form-progress-step" data-step="3">
+                <div class="form-progress-circle">
+                  <span class="form-progress-number">3</span>
+                  <svg class="form-progress-check" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>
+                </div>
+                <span class="form-progress-label">Your Goals</span>
+              </div>
+            </div>
+
+            <form id="consultationForm" novalidate>
+
+              <!-- Step 1: Your Details -->
+              <div class="form-step active" data-form-step="1">
+                <div class="form-group">
+                  <label for="fullName" class="form-label">Full Name <span style="color: var(--error);">*</span></label>
+                  <input type="text" id="fullName" name="fullName" class="form-input" placeholder="e.g. James Richardson" required aria-required="true">
+                  <p class="form-error" id="fullNameError" role="alert" aria-live="polite"></p>
+                </div>
+
+                <div class="form-group">
+                  <label for="email" class="form-label">Email Address <span style="color: var(--error);">*</span></label>
+                  <input type="email" id="email" name="email" class="form-input" placeholder="e.g. james@example.com" required aria-required="true">
+                  <p class="form-error" id="emailError" role="alert" aria-live="polite"></p>
+                </div>
+
+                <div class="form-group">
+                  <label for="phone" class="form-label">Phone Number</label>
+                  <input type="tel" id="phone" name="phone" class="form-input" placeholder="e.g. +1 (234) 567-890">
+                </div>
+
+                <div class="form-nav">
+                  <div></div>
+                  <button type="button" class="btn btn-primary" id="nextStep1">Next: Your Profile <span class="btn-arrow">→</span></button>
+                </div>
+              </div>
+
+              <!-- Step 2: Your Profile -->
+              <div class="form-step" data-form-step="2">
+                <div class="form-group">
+                  <label for="clientType" class="form-label">I am a:</label>
+                  <select id="clientType" name="clientType" class="form-select">
+                    <option value="" disabled selected>Please select</option>
+                    <option value="individual">Individual</option>
+                    <option value="family">Family</option>
+                    <option value="business-owner">Business Owner</option>
+                    <option value="institution">Institution</option>
+                    <option value="other">Other</option>
+                  </select>
+                </div>
+
+                <div class="form-group">
+                  <label for="assets" class="form-label">Approximate Investable Assets:</label>
+                  <select id="assets" name="assets" class="form-select">
+                    <option value="" disabled selected>Please select</option>
+                    <option value="under-1m">Under $1M</option>
+                    <option value="1m-5m">$1M – $5M</option>
+                    <option value="5m-10m">$5M – $10M</option>
+                    <option value="10m-25m">$10M – $25M</option>
+                    <option value="25m-50m">$25M – $50M</option>
+                    <option value="50m-plus">$50M+</option>
+                    <option value="prefer-not">Prefer not to say</option>
+                  </select>
+                </div>
+
+                <div class="form-group">
+                  <label class="form-label">Are you currently working with an advisor?</label>
+                  <div class="form-radio-group">
+                    <label class="form-radio-label">
+                      <input type="radio" name="hasAdvisor" value="yes" class="form-radio">
+                      <span class="form-radio-custom"></span>
+                      Yes
+                    </label>
+                    <label class="form-radio-label">
+                      <input type="radio" name="hasAdvisor" value="no" class="form-radio">
+                      <span class="form-radio-custom"></span>
+                      No
+                    </label>
+                  </div>
+                </div>
+
+                <div class="form-nav">
+                  <button type="button" class="btn btn-secondary" id="backStep2"><span class="btn-arrow">←</span> Back</button>
+                  <button type="button" class="btn btn-primary" id="nextStep2">Next: Your Goals <span class="btn-arrow">→</span></button>
+                </div>
+              </div>
+
+              <!-- Step 3: Your Goals -->
+              <div class="form-step" data-form-step="3">
+                <div class="form-group">
+                  <label for="financialGoal" class="form-label">Primary Financial Goal:</label>
+                  <select id="financialGoal" name="financialGoal" class="form-select">
+                    <option value="" disabled selected>Please select</option>
+                    <option value="growth">Growth</option>
+                    <option value="preservation">Preservation</option>
+                    <option value="transfer">Transfer</option>
+                    <option value="exit-planning">Exit Planning</option>
+                    <option value="philanthropy">Philanthropy</option>
+                  </select>
+                </div>
+
+                <div class="form-group">
+                  <label for="message" class="form-label">How Can We Help?</label>
+                  <textarea id="message" name="message" class="form-textarea" placeholder="Tell us about your goals, questions, or how we can assist you..."></textarea>
+                </div>
+
+                <div class="form-group">
+                  <label class="form-label">Preferred Contact Method:</label>
+                  <div class="form-checkbox-group">
+                    <label class="form-checkbox-label">
+                      <input type="checkbox" name="contactMethod" value="email" class="form-checkbox">
+                      <span class="form-checkbox-custom">
+                        <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>
+                      </span>
+                      Email
+                    </label>
+                    <label class="form-checkbox-label">
+                      <input type="checkbox" name="contactMethod" value="phone" class="form-checkbox">
+                      <span class="form-checkbox-custom">
+                        <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>
+                      </span>
+                      Phone
+                    </label>
+                    <label class="form-checkbox-label">
+                      <input type="checkbox" name="contactMethod" value="video" class="form-checkbox">
+                      <span class="form-checkbox-custom">
+                        <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>
+                      </span>
+                      Video Call
+                    </label>
+                  </div>
+                </div>
+
+                <div class="form-nav">
+                  <button type="button" class="btn btn-secondary" id="backStep3"><span class="btn-arrow">←</span> Back</button>
+                  <button type="submit" class="btn btn-primary btn-lg" id="submitBtn">Schedule My Consultation</button>
+                </div>
+              </div>
+
+            </form>
+
+            <!-- Success Message (hidden by default) -->
+            <div id="formSuccess" style="display: none; text-align: center; padding: var(--space-8) var(--space-5);">
+              <div style="width: 72px; height: 72px; margin: 0 auto var(--space-5); background: linear-gradient(135deg, var(--gold-500), var(--gold-400)); border-radius: 50%; display: flex; align-items: center; justify-content: center;">
+                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>
+              </div>
+              <h3 class="heading-lg mb-4" style="font-family: var(--font-display); color: var(--navy-900);">Thank You</h3>
+              <p class="body-lg text-muted mb-5">Your consultation request has been received. A member of our advisory team will be in touch within one business day to schedule a time that works for you.</p>
+              <p class="body-sm text-muted">If your matter is urgent, please call us directly at <a href="tel:+1234567890" style="color: var(--gold-500); font-weight: 600;">+1 (234) 567-890</a>.</p>
+            </div>
+
+            <!-- Trust Block -->
+            <div class="trust-block">
+              <div class="trust-block-item">
+                <svg class="trust-block-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+                <span>Bank-grade encryption</span>
+              </div>
+              <div class="trust-block-item">
+                <svg class="trust-block-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                <span>We never share your information</span>
+              </div>
+              <div class="trust-block-item">
+                <svg class="trust-block-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
+                <span>SEC-registered fiduciary</span>
+              </div>
+              <div class="trust-block-item">
+                <svg class="trust-block-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                <span>Response within 24 hours</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right: Contact Info -->
+          <div class="contact-info-wrapper reveal-right">
+
+            <!-- Availability Badge -->
+            <div class="availability-badge">
+              <span class="availability-pulse"></span>
+              <span class="availability-text">Next available consultation: <strong>Within 48 hours</strong></span>
+            </div>
+
+            <!-- Headquarters -->
+            <div class="contact-info-block">
+              <h3 class="info-heading">Headquarters</h3>
+              <div style="width: 100%; aspect-ratio: 16/9; border-radius: var(--radius-md); overflow: hidden; margin-bottom: var(--space-5);">
+                <img src="images/contact-office.png" alt="Tucker Hamberg headquarters building" loading="lazy" style="width: 100%; height: 100%; object-fit: cover;">
+              </div>
+
+              <div class="info-item">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                <div>
+                  <strong style="color: var(--charcoal-800);">New York City</strong><br>
+                  245 Park Avenue, 39th Floor<br>
+                  New York, NY 10167
+                </div>
+              </div>
+
+              <div class="info-item">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                <div>
+                  <a href="tel:+1234567890" style="color: var(--charcoal-600);">+1 (234) 567-890</a>
+                </div>
+              </div>
+
+              <div class="info-item">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                <div>
+                  <a href="mailto:hello@tuckerhamberg.com" style="color: var(--charcoal-600);">hello@tuckerhamberg.com</a>
+                </div>
+              </div>
+
+              <div class="info-item">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                <div>
+                  <strong style="color: var(--charcoal-800);">Office Hours</strong><br>
+                  Monday – Friday: 8:00 AM – 6:00 PM EST<br>
+                  Saturday – Sunday: By appointment only
+                </div>
+              </div>
+            </div>
+
+            <!-- Alternative Contact -->
+            <div class="contact-alternative">
+              <h4 class="alt-heading">Alternative Contact</h4>
+
+              <div class="alt-item">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                <a href="mailto:hello@tuckerhamberg.com">hello@tuckerhamberg.com</a>
+              </div>
+
+              <div class="alt-item">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                <a href="tel:+1234567890">+1 (234) 567-890</a>
+              </div>
+
+              <div class="alt-item">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+                <a href="#" style="color: var(--gold-500); font-weight: 600;">Client Portal Login →</a>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq-section" id="consultation-faq">
+      <div class="container">
+        <div class="section-header text-center">
+          <p class="overline section-overline text-gold reveal">Common Questions</p>
+          <h2 class="section-title display-md reveal">About Your Consultation</h2>
+          <p class="section-subtitle reveal">Everything you need to know before scheduling your first meeting with our advisory team.</p>
+        </div>
+
+        <div class="faq-list">
+          <div class="faq-item reveal">
+            <button class="faq-question" aria-expanded="false" id="faq-btn-1">
+              Is the initial consultation really free?
+              <span class="faq-icon">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+              </span>
+            </button>
+            <div class="faq-answer" role="region" aria-labelledby="faq-btn-1">
+              <div class="faq-answer-inner">
+                Absolutely. Our initial consultation is complimentary and carries no obligation. We believe that a meaningful advisory relationship must begin with mutual understanding. This first conversation allows us to learn about your goals, and for you to evaluate whether our approach aligns with your needs. There is never any pressure to proceed.
+              </div>
+            </div>
+          </div>
+
+          <div class="faq-item reveal">
+            <button class="faq-question" aria-expanded="false" id="faq-btn-2">
+              How long does the first meeting take?
+              <span class="faq-icon">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+              </span>
+            </button>
+            <div class="faq-answer" role="region" aria-labelledby="faq-btn-2">
+              <div class="faq-answer-inner">
+                Most initial consultations last between 30 and 60 minutes. This gives us ample time to discuss your current financial situation, understand your aspirations, and outline how our services might benefit you — without feeling rushed. We respect your time and will always stay focused on what matters most to you.
+              </div>
+            </div>
+          </div>
+
+          <div class="faq-item reveal">
+            <button class="faq-question" aria-expanded="false" id="faq-btn-3">
+              What should I prepare for the consultation?
+              <span class="faq-icon">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+              </span>
+            </button>
+            <div class="faq-answer" role="region" aria-labelledby="faq-btn-3">
+              <div class="faq-answer-inner">
+                There is no formal preparation required. However, it can be helpful to have a general sense of your current financial picture — including approximate asset levels, any existing investment accounts, and your primary financial goals or concerns. If you have specific questions or documents you'd like to discuss, feel free to bring those along as well.
+              </div>
+            </div>
+          </div>
+
+          <div class="faq-item reveal">
+            <button class="faq-question" aria-expanded="false" id="faq-btn-4">
+              What happens after the initial conversation?
+              <span class="faq-icon">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+              </span>
+            </button>
+            <div class="faq-answer" role="region" aria-labelledby="faq-btn-4">
+              <div class="faq-answer-inner">
+                After our initial meeting, if there is a mutual fit, we will prepare a personalised proposal outlining our recommended approach, fee structure, and next steps. You are welcome to take as much time as you need to review it. If you decide to move forward, we begin with a comprehensive discovery process to build a strategy tailored precisely to your situation.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer" role="contentinfo">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="footer-logo">
+            <div class="footer-logo-mark">TH</div>
+            <div class="footer-logo-text">Tucker Hamberg<span>Wealth Management</span></div>
+          </div>
+          <p class="footer-desc">An independent wealth management firm dedicated to protecting and growing wealth across generations. We provide personalised, objective financial guidance to individuals, families, and institutions worldwide.</p>
+        </div>
+        <div class="footer-column">
+          <h3 class="footer-heading">Company</h3>
+          <a href="about.html">About Us</a>
+          <a href="about.html#team">Leadership</a>
+          <a href="about.html#values">Our Values</a>
+          <a href="why-us.html">Why Choose Us</a>
+          <a href="who-we-serve.html">Who We Serve</a>
+        </div>
+        <div class="footer-column">
+          <h3 class="footer-heading">Services</h3>
+          <a href="services.html#investment">Investment Management</a>
+          <a href="services.html#wealth-planning">Wealth Planning</a>
+          <a href="services.html#estate">Estate & Legacy</a>
+          <a href="services.html#family-office">Family Office</a>
+          <a href="services.html#tax">Tax Advisory</a>
+          <a href="services.html#philanthropy">Philanthropy</a>
+        </div>
+        <div class="footer-column">
+          <h3 class="footer-heading">Contact</h3>
+          <a href="contact.html">Get in Touch</a>
+          <a href="tel:+1234567890">+1 (234) 567-890</a>
+          <a href="mailto:hello@tuckerhamberg.com">hello@tuckerhamberg.com</a>
+          <a href="#">Client Portal</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 Tucker Hamberg Wealth Management. All rights reserved.</p>
+        <div class="footer-bottom-links">
+          <a href="privacy.html">Privacy Policy</a>
+          <a href="privacy.html#terms">Terms of Service</a>
+          <a href="privacy.html#disclosures">Disclosures</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Back to Top -->
+  <button class="back-to-top" id="backToTop" aria-label="Back to top">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 15l-6-6-6 6"/></svg>
+  </button>
+
+  <!-- Mobile Sticky CTA -->
+  <div class="mobile-sticky-cta">
+    <a href="contact.html" class="btn btn-dark-primary btn-sm">Book a Consultation</a>
+  </div>
+
+  <!-- Shared JavaScript -->
+  <script>
+  // Loading screen
+  window.addEventListener('load', () => {
+    setTimeout(() => {
+      document.getElementById('loadingScreen').classList.add('hidden');
+    }, 1500);
+  });
+
+  // Navbar scroll
+  const navbar = document.getElementById('navbar');
+  let lastScroll = 0;
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 80) {
+      navbar.classList.add('scrolled');
+    } else {
+      navbar.classList.remove('scrolled');
+    }
+  });
+
+  // Mobile menu
+  const menuToggle = document.getElementById('menuToggle');
+  const mobileMenu = document.getElementById('mobileMenu');
+  menuToggle.addEventListener('click', () => {
+    menuToggle.classList.toggle('active');
+    mobileMenu.classList.toggle('active');
+    document.body.style.overflow = mobileMenu.classList.contains('active') ? 'hidden' : '';
+    menuToggle.setAttribute('aria-expanded', mobileMenu.classList.contains('active'));
+  });
+
+  // Scroll reveal
+  const revealElements = document.querySelectorAll('.reveal, .reveal-left, .reveal-right, .reveal-scale');
+  const revealObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+      }
+    });
+  }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+  revealElements.forEach(el => revealObserver.observe(el));
+
+  // Counter animation
+  function animateCounter(el) {
+    const target = parseInt(el.getAttribute('data-target'));
+    const suffix = el.getAttribute('data-suffix') || '';
+    const prefix = el.getAttribute('data-prefix') || '';
+    const duration = 2000;
+    const start = performance.now();
+    function update(now) {
+      const elapsed = now - start;
+      const progress = Math.min(elapsed / duration, 1);
+      const eased = 1 - Math.pow(1 - progress, 3);
+      const current = Math.round(target * eased);
+      el.textContent = prefix + current.toLocaleString() + suffix;
+      if (progress < 1) requestAnimationFrame(update);
+    }
+    requestAnimationFrame(update);
+  }
+
+  const counterElements = document.querySelectorAll('[data-counter]');
+  const counterObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        animateCounter(entry.target);
+        counterObserver.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.5 });
+  counterElements.forEach(el => counterObserver.observe(el));
+
+  // Back to top
+  const backToTop = document.getElementById('backToTop');
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 600) {
+      backToTop.classList.add('visible');
+    } else {
+      backToTop.classList.remove('visible');
+    }
+  });
+  backToTop.addEventListener('click', () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+
+  // FAQ Accordion
+  document.querySelectorAll('.faq-question').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const item = btn.parentElement;
+      const isActive = item.classList.contains('active');
+      // Close all
+      document.querySelectorAll('.faq-item').forEach(i => {
+        i.classList.remove('active');
+        i.querySelector('.faq-question').setAttribute('aria-expanded', 'false');
+      });
+      // Open clicked if wasn't active
+      if (!isActive) {
+        item.classList.add('active');
+        btn.setAttribute('aria-expanded', 'true');
+      }
+    });
+  });
+  </script>
+
+  <!-- Multi-Step Form Validation JavaScript -->
+  <script>
+  (function() {
+    const form = document.getElementById('consultationForm');
+    const formWrapper = document.getElementById('formWrapper');
+    const formSuccess = document.getElementById('formSuccess');
+    const progressSteps = document.querySelectorAll('.form-progress-step');
+    const progressLines = document.querySelectorAll('.form-progress-line');
+    const formSteps = document.querySelectorAll('.form-step');
+
+    let currentStep = 1;
+    const totalSteps = 3;
+
+    // ---- Helper Functions ----
+    function showError(fieldId, message) {
+      const errorEl = document.getElementById(fieldId + 'Error');
+      const inputEl = document.getElementById(fieldId);
+      if (errorEl) errorEl.textContent = message;
+      if (inputEl) {
+        inputEl.style.borderColor = 'var(--error)';
+        inputEl.classList.add('form-input-error');
+      }
+    }
+
+    function clearError(fieldId) {
+      const errorEl = document.getElementById(fieldId + 'Error');
+      const inputEl = document.getElementById(fieldId);
+      if (errorEl) errorEl.textContent = '';
+      if (inputEl) {
+        inputEl.style.borderColor = '';
+        inputEl.classList.remove('form-input-error');
+      }
+    }
+
+    function validateEmail(email) {
+      const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      return re.test(email);
+    }
+
+    // ---- Progress Bar Update ----
+    function updateProgress(step) {
+      progressSteps.forEach((ps, idx) => {
+        const stepNum = idx + 1;
+        ps.classList.remove('active', 'completed');
+        if (stepNum < step) {
+          ps.classList.add('completed');
+        } else if (stepNum === step) {
+          ps.classList.add('active');
+        }
+      });
+
+      progressLines.forEach((line, idx) => {
+        const lineNum = idx + 1;
+        if (lineNum < step) {
+          line.classList.add('completed');
+        } else {
+          line.classList.remove('completed');
+        }
+      });
+    }
+
+    // ---- Step Navigation ----
+    function goToStep(step) {
+      // Animate out current step
+      const currentFormStep = document.querySelector('.form-step.active');
+      if (currentFormStep) {
+        currentFormStep.classList.add('exiting');
+        setTimeout(() => {
+          currentFormStep.classList.remove('active', 'exiting');
+        }, 300);
+      }
+
+      // Animate in new step
+      setTimeout(() => {
+        const newFormStep = document.querySelector(`[data-form-step="${step}"]`);
+        if (newFormStep) {
+          newFormStep.classList.add('active');
+        }
+        currentStep = step;
+        updateProgress(step);
+
+        // Scroll form into view smoothly
+        formWrapper.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }, 320);
+    }
+
+    // ---- Step 1 Validation ----
+    function validateStep1() {
+      let isValid = true;
+
+      const fullName = document.getElementById('fullName').value.trim();
+      if (!fullName) {
+        showError('fullName', 'Please enter your full name.');
+        isValid = false;
+      } else {
+        clearError('fullName');
+      }
+
+      const email = document.getElementById('email').value.trim();
+      if (!email) {
+        showError('email', 'Please enter your email address.');
+        isValid = false;
+      } else if (!validateEmail(email)) {
+        showError('email', 'Please enter a valid email address.');
+        isValid = false;
+      } else {
+        clearError('email');
+      }
+
+      return isValid;
+    }
+
+    // ---- Clear errors on input ----
+    document.getElementById('fullName').addEventListener('input', function() {
+      if (this.value.trim()) clearError('fullName');
+    });
+    document.getElementById('email').addEventListener('input', function() {
+      if (this.value.trim()) clearError('email');
+    });
+
+    // ---- Navigation Buttons ----
+    document.getElementById('nextStep1').addEventListener('click', () => {
+      if (validateStep1()) {
+        goToStep(2);
+      }
+    });
+
+    document.getElementById('backStep2').addEventListener('click', () => {
+      goToStep(1);
+    });
+
+    document.getElementById('nextStep2').addEventListener('click', () => {
+      goToStep(3);
+    });
+
+    document.getElementById('backStep3').addEventListener('click', () => {
+      goToStep(2);
+    });
+
+    // ---- Form Submit ----
+    form.addEventListener('submit', function(e) {
+      e.preventDefault();
+
+      // Final validation (step 1 required fields)
+      if (!validateStep1()) {
+        goToStep(1);
+        return;
+      }
+
+      // Mark all progress complete
+      progressSteps.forEach(ps => {
+        ps.classList.remove('active');
+        ps.classList.add('completed');
+      });
+      progressLines.forEach(line => line.classList.add('completed'));
+
+      // Hide form and progress, show success
+      setTimeout(() => {
+        form.style.display = 'none';
+        document.getElementById('formProgress').style.display = 'none';
+        formWrapper.querySelector('h2').style.display = 'none';
+        formWrapper.querySelector('p.body-sm').style.display = 'none';
+        formSuccess.style.display = 'block';
+        formWrapper.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }, 400);
+    });
+
+    // ---- Zeigarnik Effect: Show completion percentage ----
+    function updateCompletionHint() {
+      const filledFields = [];
+      const allFields = [
+        { el: document.getElementById('fullName'), type: 'text' },
+        { el: document.getElementById('email'), type: 'text' },
+        { el: document.getElementById('phone'), type: 'text' },
+        { el: document.getElementById('clientType'), type: 'select' },
+        { el: document.getElementById('assets'), type: 'select' },
+        { el: document.getElementById('financialGoal'), type: 'select' },
+        { el: document.getElementById('message'), type: 'text' },
+      ];
+
+      let filled = 0;
+      allFields.forEach(f => {
+        if (f.type === 'text' && f.el && f.el.value.trim()) filled++;
+        if (f.type === 'select' && f.el && f.el.value) filled++;
+      });
+
+      // Check radios
+      if (document.querySelector('input[name="hasAdvisor"]:checked')) filled++;
+      // Check checkboxes
+      if (document.querySelector('input[name="contactMethod"]:checked')) filled++;
+
+      const total = allFields.length + 2; // +2 for radio and checkbox groups
+      const pct = Math.round((filled / total) * 100);
+
+      // Update submit button text with completion hint on step 3
+      const submitBtn = document.getElementById('submitBtn');
+      if (submitBtn && currentStep === 3 && pct < 100) {
+        submitBtn.textContent = `Schedule My Consultation (${pct}% complete)`;
+      } else if (submitBtn) {
+        submitBtn.textContent = 'Schedule My Consultation';
+      }
+    }
+
+    // Attach change/input listeners for Zeigarnik effect
+    document.querySelectorAll('#consultationForm input, #consultationForm select, #consultationForm textarea').forEach(el => {
+      el.addEventListener('input', updateCompletionHint);
+      el.addEventListener('change', updateCompletionHint);
+    });
+  })();
+  
+    // Scroll Progress Bar
+    const scrollProg = document.getElementById('scrollProgress');
+    if (scrollProg) {
+      window.addEventListener('scroll', () => {
+        const pct = (window.scrollY / (document.documentElement.scrollHeight - window.innerHeight)) * 100;
+        scrollProg.style.width = pct + '%';
+      }, { passive: true });
+    }
+
+    // Image Lazy Load Fade-In
+    document.querySelectorAll('img[loading="lazy"]').forEach(img => {
+      img.style.opacity = '0';
+      img.style.transition = 'opacity 0.8s ease';
+      if (img.complete) { img.style.opacity = '1'; }
+      else { img.addEventListener('load', () => { img.style.opacity = '1'; }); }
+    });
+
+    // Card Mouse Tilt Effect
+    document.querySelectorAll('.card-segment, .card-value, .card-insight, .card-scenario').forEach(card => {
+      card.addEventListener('mousemove', (e) => {
+        const r = card.getBoundingClientRect();
+        const x = (e.clientX - r.left) / r.width - 0.5;
+        const y = (e.clientY - r.top) / r.height - 0.5;
+        card.style.transform = `perspective(800px) rotateX(${-y*5}deg) rotateY(${x*5}deg) translateY(-6px) scale(1.02)`;
+      });
+      card.addEventListener('mouseleave', () => {
+        card.style.transform = '';
+        card.style.transition = 'transform 0.5s cubic-bezier(0.23, 1, 0.32, 1)';
+        setTimeout(() => card.style.transition = '', 500);
+      });
+    });
+
+    // Staggered Grid Reveal
+    document.querySelectorAll('.grid').forEach(g => {
+      const items = g.querySelectorAll('.card, .stat-card, .award-item');
+      const gObs = new IntersectionObserver((e) => {
+        if (e[0].isIntersecting) {
+          items.forEach((c, i) => setTimeout(() => { c.style.opacity='1'; c.style.transform='translateY(0)'; }, i*120));
+          gObs.disconnect();
+        }
+      }, { threshold: 0.15 });
+      if (items.length) {
+        items.forEach(c => { c.style.opacity='0'; c.style.transform='translateY(30px)'; c.style.transition='opacity 0.6s ease, transform 0.6s cubic-bezier(0.23, 1, 0.32, 1)'; });
+        gObs.observe(g);
+      }
+    });
+</script>
+
+</body>
+</html>

@@ -1,0 +1,618 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Us — Tucker Hamberg Wealth Management</title>
+  <meta name="description" content="Learn about Tucker Hamberg Wealth Management — our story, mission, core values, and the leadership team dedicated to protecting and growing your wealth across generations.">
+  <link rel="canonical" href="https://tuckerhamberg.com/about.html">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    /* Testimonial section (matches homepage) */
+    .testimonial-section { background: var(--ivory-100); position: relative; }
+    .testimonial-section::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 1px; background: linear-gradient(90deg, transparent, var(--gold-300), transparent); }
+    .testimonial-quote-mark { font-family: var(--font-display); font-size: 6rem; color: var(--gold-300); line-height: 0.5; margin-bottom: var(--space-5); text-align: center; }
+  </style>
+</head>
+<body>
+
+  <!-- Skip Link -->
+  <a href="#main" class="skip-link">Skip to main content</a>
+
+  <!-- Loading Screen -->
+  <div class="loading-screen" id="loadingScreen">
+    <div class="loading-logo">TH</div>
+    <div class="loading-bar"><div class="loading-bar-fill"></div></div>
+  </div>
+
+  <!-- Navigation -->
+  <nav class="navbar" id="navbar" role="navigation" aria-label="Main navigation">
+    <div class="navbar-inner">
+      <a href="index.html" class="navbar-logo" aria-label="Tucker Hamberg - Home">
+        <div class="navbar-logo-mark">TH</div>
+        <div class="navbar-logo-text">Tucker Hamberg<span>Wealth Management</span></div>
+      </a>
+      <div class="navbar-links">
+        <a href="about.html" class="active">About</a>
+        <a href="services.html">Services</a>
+        <a href="who-we-serve.html">Who We Serve</a>
+        <a href="why-us.html">Why Choose Us</a>
+        <a href="contact.html">Contact</a>
+      </div>
+      <div class="navbar-cta">
+        <a href="contact.html" class="btn btn-primary btn-sm">Schedule Consultation</a>
+      </div>
+      <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Mobile Menu -->
+  <div class="mobile-menu" id="mobileMenu" role="dialog" aria-label="Mobile navigation">
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="services.html">Services</a>
+    <a href="who-we-serve.html">Who We Serve</a>
+    <a href="why-us.html">Why Choose Us</a>
+    <a href="contact.html">Contact</a>
+    <a href="contact.html" class="btn btn-dark-primary">Schedule Consultation</a>
+  </div>
+
+  <!-- Main Content -->
+  <main id="main">
+    <div class="scroll-progress" id="scrollProgress"></div>
+
+    <!-- ==================== PAGE HERO ==================== -->
+    <section class="page-hero page-hero--about" aria-label="About page introduction">
+      <div class="container">
+        <p class="overline page-overline reveal">About Us</p>
+        <h1 class="page-title display-lg reveal">Built on Trust. Guided by Purpose.</h1>
+        <p class="page-subtitle reveal">Discover the story, values, and people behind Tucker Hamberg — and why clients trust us with what matters most.</p>
+      </div>
+    </section>
+
+    <!-- ==================== CREDIBILITY BAR (Authority Principle) ==================== -->
+    <section class="credibility-bar reveal" aria-label="Credentials and recognition">
+      <div class="container">
+        <div class="credibility-inner">
+          <span class="credibility-label">Trusted & Recognised</span>
+          <div class="credibility-items">
+            <div class="credibility-item">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="M9 12l2 2 4-4"/></svg>
+              SEC Registered Investment Adviser
+            </div>
+            <div class="credibility-divider"></div>
+            <div class="credibility-item">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="8" r="6"/><path d="M15.477 12.89L17 22l-5-3-5 3 1.523-9.11"/></svg>
+              Certified Financial Planner™ Practitioners
+            </div>
+            <div class="credibility-divider"></div>
+            <div class="credibility-item">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+              Fiduciary Standard of Care
+            </div>
+            <div class="credibility-divider"></div>
+            <div class="credibility-item">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 014 10 15.3 15.3 0 01-4 10 15.3 15.3 0 01-4-10 15.3 15.3 0 014-10z"/></svg>
+              Global Advisory Capabilities
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== OUR STORY ==================== -->
+    <section class="section-lg" id="story" aria-label="Our story">
+      <div class="container">
+        <div class="section-header reveal">
+          <p class="overline section-overline">Our Story</p>
+          <h2 class="section-title display-md">A Firm Built to Be Different</h2>
+        </div>
+        <div class="grid grid-2" style="align-items: center;">
+          <div class="reveal-left">
+            <p class="body-lg text-muted" style="margin-bottom: var(--space-5);">Tucker Hamberg was founded on a simple but powerful belief: that the best financial advice is the kind that puts the client first, always. What began as a boutique advisory practice has grown into a full-spectrum wealth management firm — yet our founding values remain unchanged.</p>
+            <p class="body-lg text-muted">We were built to be different. Not shaped by quarterly targets or institutional mandates, but by the relationships we form and the outcomes we create for the people who trust us with what matters most.</p>
+          </div>
+          <div class="reveal-right">
+            <div style="width: 100%; aspect-ratio: 4/3; border-radius: var(--radius-lg); overflow: hidden; position: relative;">
+              <img src="images/about-office.png" alt="Tucker Hamberg headquarters" loading="lazy" style="width: 100%; height: 100%; object-fit: cover;">
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== OUR NUMBERS SPEAK (Metrics Section) ==================== -->
+    <section class="trust-bar section-sm" aria-label="Firm-wide metrics">
+      <div class="container">
+        <div class="section-header text-center reveal" style="margin-bottom: var(--space-7);">
+          <p class="overline section-overline" style="color: var(--gold-400);">By the Numbers</p>
+          <h2 class="section-title display-md" style="color: var(--white);">Our Numbers Speak</h2>
+        </div>
+        <div class="grid grid-4">
+          <div class="stat-card reveal reveal-delay-1">
+            <div class="stat-number" data-counter data-target="25" data-suffix="+">0+</div>
+            <div class="stat-label">Years of Excellence</div>
+            <div class="stat-description">Decades of guiding clients through every market cycle with consistency and care.</div>
+          </div>
+          <div class="stat-card reveal reveal-delay-2">
+            <div class="stat-number" data-counter data-target="12" data-prefix="$" data-suffix="B+">$0B+</div>
+            <div class="stat-label">Assets Under Management</div>
+            <div class="stat-description">A reflection of the trust our clients place in our judgment and stewardship.</div>
+          </div>
+          <div class="stat-card reveal reveal-delay-3">
+            <div class="stat-number" data-counter data-target="500" data-suffix="+">0+</div>
+            <div class="stat-label">Client Families</div>
+            <div class="stat-description">A diverse, global community of individuals and institutions we are proud to serve.</div>
+          </div>
+          <div class="stat-card reveal reveal-delay-4">
+            <div class="stat-number" data-counter data-target="98" data-suffix="%">0%</div>
+            <div class="stat-label">Client Retention</div>
+            <div class="stat-description">Our most meaningful measure of success — relationships built to last.</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== MISSION & VISION ==================== -->
+    <section class="section bg-ivory-alt" id="mission" aria-label="Mission and vision">
+      <div class="container">
+        <div class="section-header text-center reveal">
+          <p class="overline section-overline">What Drives Us</p>
+          <h2 class="section-title display-md">Mission &amp; Vision</h2>
+        </div>
+        <div class="grid grid-2">
+          <!-- Mission Card -->
+          <div class="card reveal reveal-delay-1" style="border-top: 3px solid var(--gold-500); text-align: center; padding: var(--space-7);">
+            <div style="width: 64px; height: 64px; margin: 0 auto var(--space-5); display: flex; align-items: center; justify-content: center; background: linear-gradient(135deg, var(--ivory-100), var(--ivory-200)); border-radius: 50%;">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="var(--gold-500)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="10"/>
+                <circle cx="12" cy="12" r="6"/>
+                <circle cx="12" cy="12" r="2"/>
+              </svg>
+            </div>
+            <h3 class="heading-lg text-navy" style="margin-bottom: var(--space-4);">Our Mission</h3>
+            <div class="gold-line-center mb-5"></div>
+            <p class="body-md text-muted">To help our clients achieve financial clarity, build enduring wealth, and leave a meaningful legacy — through principled advice, rigorous expertise, and an unwavering commitment to their best interests.</p>
+          </div>
+          <!-- Vision Card -->
+          <div class="card reveal reveal-delay-2" style="border-top: 3px solid var(--gold-500); text-align: center; padding: var(--space-7);">
+            <div style="width: 64px; height: 64px; margin: 0 auto var(--space-5); display: flex; align-items: center; justify-content: center; background: linear-gradient(135deg, var(--ivory-100), var(--ivory-200)); border-radius: 50%;">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="var(--gold-500)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7Z"/>
+                <circle cx="12" cy="12" r="3"/>
+              </svg>
+            </div>
+            <h3 class="heading-lg text-navy" style="margin-bottom: var(--space-4);">Our Vision</h3>
+            <div class="gold-line-center mb-5"></div>
+            <p class="body-md text-muted">To be the most trusted name in private wealth management — known not just for the returns we deliver, but for the lives we help our clients build.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== CORE VALUES ==================== -->
+    <section class="section" id="values" aria-label="Our core values">
+      <div class="container">
+        <div class="section-header text-center reveal">
+          <p class="overline section-overline">Our Principles</p>
+          <h2 class="section-title display-md">Core Values</h2>
+          <p class="section-subtitle">The principles that guide every decision we make and every relationship we build.</p>
+        </div>
+        <div class="grid grid-3">
+          <!-- Value 1: Integrity -->
+          <div class="card card-value reveal reveal-delay-1">
+            <div class="value-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+              </svg>
+            </div>
+            <h3 class="value-title">Integrity</h3>
+            <p class="value-text">We always do what is right for our clients, even when it is not the easiest path. Trust is earned through consistent, principled action.</p>
+          </div>
+          <!-- Value 2: Excellence -->
+          <div class="card card-value reveal reveal-delay-2">
+            <div class="value-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
+              </svg>
+            </div>
+            <h3 class="value-title">Excellence</h3>
+            <p class="value-text">We hold ourselves to the highest standards in research, advice, and service delivery. Mediocrity has no place in wealth stewardship.</p>
+          </div>
+          <!-- Value 3: Independence -->
+          <div class="card card-value reveal reveal-delay-3">
+            <div class="value-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/>
+                <polyline points="22 4 12 14.01 9 11.01"/>
+              </svg>
+            </div>
+            <h3 class="value-title">Independence</h3>
+            <p class="value-text">Our recommendations are always objective — free from hidden incentives or conflicts. Our only obligation is to you and your financial wellbeing.</p>
+          </div>
+          <!-- Value 4: Long-Term Thinking -->
+          <div class="card card-value reveal reveal-delay-4">
+            <div class="value-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="10"/>
+                <polyline points="12 6 12 12 16 14"/>
+              </svg>
+            </div>
+            <h3 class="value-title">Long-Term Thinking</h3>
+            <p class="value-text">We make decisions that benefit our clients over years and decades, not just quarters. Patience and discipline are at the heart of enduring wealth.</p>
+          </div>
+          <!-- Value 5: Partnership -->
+          <div class="card card-value reveal reveal-delay-5">
+            <div class="value-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+                <circle cx="9" cy="7" r="4"/>
+                <path d="M23 21v-2a4 4 0 0 0-3-3.87"/>
+                <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+              </svg>
+            </div>
+            <h3 class="value-title">Partnership</h3>
+            <p class="value-text">We see our clients as partners. Their success is our success. Every relationship is built on mutual respect, transparency, and shared purpose.</p>
+          </div>
+          <!-- Value 6: Discretion -->
+          <div class="card card-value reveal reveal-delay-6">
+            <div class="value-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="3" y="11" width="18" height="11" rx="2" ry="2"/>
+                <path d="M7 11V7a5 5 0 0 1 10 0v4"/>
+              </svg>
+            </div>
+            <h3 class="value-title">Discretion</h3>
+            <p class="value-text">We treat every piece of client information with the utmost confidentiality and respect. Your privacy is not negotiable — it is foundational.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== LEADERSHIP TEAM ==================== -->
+    <section class="section bg-ivory-alt" id="team" aria-label="Leadership team">
+      <div class="container">
+        <div class="section-header text-center reveal">
+          <p class="overline section-overline">Leadership</p>
+          <h2 class="section-title display-md">The People Behind the Promise</h2>
+          <p class="section-subtitle">Our leadership team brings decades of experience in private wealth management, institutional investing, and client advisory.</p>
+        </div>
+        <div class="grid grid-2" style="max-width: 900px; margin: 0 auto;">
+          <!-- Team Member 1 -->
+          <div class="card card-team reveal reveal-delay-1">
+            <div class="team-photo" style="width: 100%; height: 360px; overflow: hidden; position: relative;">
+              <img src="images/team-ceo.png" alt="Jonathan Tucker - Founder & CEO" loading="lazy" style="width: 100%; height: 100%; object-fit: cover; object-position: center top;">
+            </div>
+            <div class="team-info">
+              <h3 class="team-name">Jonathan Tucker</h3>
+              <p class="team-title">Founder &amp; Chief Executive Officer</p>
+              <p class="team-bio">With over two decades of experience in private wealth management, Jonathan founded the firm with a vision to deliver institutional-quality financial advice to individuals and families. His approach is rooted in deep personal relationships, rigorous analysis, and a genuine passion for helping clients achieve what matters most to them.</p>
+            </div>
+          </div>
+          <!-- Team Member 2 -->
+          <div class="card card-team reveal reveal-delay-2">
+            <div class="team-photo" style="width: 100%; height: 360px; overflow: hidden; position: relative;">
+              <img src="images/team-cio.png" alt="Catherine Hamberg - Chief Investment Officer" loading="lazy" style="width: 100%; height: 100%; object-fit: cover; object-position: center top;">
+            </div>
+            <div class="team-info">
+              <h3 class="team-name">Catherine Hamberg</h3>
+              <p class="team-title">Chief Investment Officer</p>
+              <p class="team-bio">Overseeing all investment strategy and portfolio management, Catherine brings extensive experience across global markets. Her philosophy is grounded in evidence-based investing, disciplined risk management, and a relentless focus on long-term client outcomes that endure through every market cycle.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== TESTIMONIAL CAROUSEL (Social Proof with Persona Tags) ==================== -->
+    <section class="section testimonial-section" aria-label="Client testimonials">
+      <div class="container">
+        <div class="section-header text-center reveal">
+          <p class="overline section-overline">Client Voices</p>
+          <h2 class="section-title display-md">What Our Clients Say</h2>
+        </div>
+        <div class="testimonial-carousel reveal" id="testimonialCarousel">
+          <div class="testimonial-quote-mark" aria-hidden="true">"</div>
+          <div class="testimonial-track" id="testimonialTrack">
+            <div class="testimonial-slide">
+              <span class="t-tag">Family Client</span>
+              <p class="t-quote">Tucker Hamberg has been instrumental in helping our family think clearly about our financial future. Their advice is always considered, patient, and deeply personal.</p>
+              <div class="t-meta">
+                <div class="t-avatar">MR</div>
+                <div class="t-info"><p class="t-name">Private Client</p><p class="t-detail">12-year relationship</p></div>
+              </div>
+            </div>
+            <div class="testimonial-slide">
+              <span class="t-tag">Entrepreneur</span>
+              <p class="t-quote">After selling my company, Tucker Hamberg helped me transition from business wealth to personal wealth with a strategy I could trust.</p>
+              <div class="t-meta">
+                <div class="t-avatar">SK</div>
+                <div class="t-info"><p class="t-name">Former CEO</p><p class="t-detail">8-year relationship</p></div>
+              </div>
+            </div>
+            <div class="testimonial-slide">
+              <span class="t-tag">Foundation</span>
+              <p class="t-quote">The level of rigour and transparency they bring to our endowment strategy is exceptional.</p>
+              <div class="t-meta">
+                <div class="t-avatar">DR</div>
+                <div class="t-info"><p class="t-name">Foundation Director</p><p class="t-detail">6-year relationship</p></div>
+              </div>
+            </div>
+          </div>
+          <div class="testimonial-dots" id="testimonialDots">
+            <button class="testimonial-dot active" data-index="0" aria-label="Testimonial 1"></button>
+            <button class="testimonial-dot" data-index="1" aria-label="Testimonial 2"></button>
+            <button class="testimonial-dot" data-index="2" aria-label="Testimonial 3"></button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== OUR APPROACH ==================== -->
+    <section class="section process-section" id="approach" aria-label="Our approach">
+      <div class="container">
+        <div class="section-header text-center reveal">
+          <p class="overline section-overline">How We Work</p>
+          <h2 class="section-title display-md">Our Approach</h2>
+          <p class="section-subtitle">A structured, client-centred process designed to turn complexity into clarity — at every stage of your wealth journey.</p>
+        </div>
+        <div class="process-steps reveal">
+          <!-- Step 1 -->
+          <div class="process-step">
+            <div class="step-number">1</div>
+            <h3 class="step-title">Discovery</h3>
+            <p class="step-text">We listen. A comprehensive first conversation to understand your financial life, goals, and values — laying the foundation for everything that follows.</p>
+          </div>
+          <!-- Step 2 -->
+          <div class="process-step">
+            <div class="step-number">2</div>
+            <h3 class="step-title">Strategy</h3>
+            <p class="step-text">We build. A fully bespoke wealth strategy tailored to your specific circumstances, designed for resilience and aligned with your long-term vision.</p>
+          </div>
+          <!-- Step 3 -->
+          <div class="process-step">
+            <div class="step-number">3</div>
+            <h3 class="step-title">Implementation</h3>
+            <p class="step-text">We act. Efficient, thoughtful execution of your plan across all service areas — from investments and estate planning to tax and philanthropy.</p>
+          </div>
+          <!-- Step 4 -->
+          <div class="process-step">
+            <div class="step-number">4</div>
+            <h3 class="step-title">Partnership</h3>
+            <p class="step-text">We evolve. Regular reviews, transparent communication, and proactive adjustments as life changes — because great wealth management never stands still.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== CTA STRIP ==================== -->
+    <section class="cta-strip" aria-label="Call to action">
+      <div class="container">
+        <h2 class="cta-title reveal">Ready to Start Your Journey?</h2>
+        <p class="cta-subtitle reveal">Whether you are exploring your options or ready to take the next step, we welcome the opportunity to learn about your goals and share how we can help.</p>
+        <a href="contact.html" class="btn btn-dark-primary btn-lg reveal">Get in Touch</a>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer" role="contentinfo">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="footer-logo">
+            <div class="footer-logo-mark">TH</div>
+            <div class="footer-logo-text">Tucker Hamberg<span>Wealth Management</span></div>
+          </div>
+          <p class="footer-desc">An independent wealth management firm dedicated to protecting and growing wealth across generations. We provide personalised, objective financial guidance to individuals, families, and institutions worldwide.</p>
+        </div>
+        <div class="footer-column">
+          <h3 class="footer-heading">Company</h3>
+          <a href="about.html">About Us</a>
+          <a href="about.html#team">Leadership</a>
+          <a href="about.html#values">Our Values</a>
+          <a href="why-us.html">Why Choose Us</a>
+          <a href="who-we-serve.html">Who We Serve</a>
+        </div>
+        <div class="footer-column">
+          <h3 class="footer-heading">Services</h3>
+          <a href="services.html#investment">Investment Management</a>
+          <a href="services.html#wealth-planning">Wealth Planning</a>
+          <a href="services.html#estate">Estate &amp; Legacy</a>
+          <a href="services.html#family-office">Family Office</a>
+          <a href="services.html#tax">Tax Advisory</a>
+          <a href="services.html#philanthropy">Philanthropy</a>
+        </div>
+        <div class="footer-column">
+          <h3 class="footer-heading">Contact</h3>
+          <a href="contact.html">Get in Touch</a>
+          <a href="tel:+1234567890">+1 (234) 567-890</a>
+          <a href="mailto:hello@tuckerhamberg.com">hello@tuckerhamberg.com</a>
+          <a href="#">Client Portal</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 Tucker Hamberg Wealth Management. All rights reserved.</p>
+        <div class="footer-bottom-links">
+          <a href="privacy.html">Privacy Policy</a>
+          <a href="privacy.html#terms">Terms of Service</a>
+          <a href="privacy.html#disclosures">Disclosures</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Back to Top -->
+  <button class="back-to-top" id="backToTop" aria-label="Back to top">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 15l-6-6-6 6"/></svg>
+  </button>
+
+  <!-- Mobile Sticky CTA -->
+  <div class="mobile-sticky-cta">
+    <a href="contact.html" class="btn btn-dark-primary btn-sm">Book a Consultation</a>
+  </div>
+
+  <!-- Shared JavaScript -->
+  <script>
+  // Loading screen
+  window.addEventListener('load', () => {
+    setTimeout(() => {
+      document.getElementById('loadingScreen').classList.add('hidden');
+    }, 1500);
+  });
+
+  // Navbar scroll
+  const navbar = document.getElementById('navbar');
+  let lastScroll = 0;
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 80) {
+      navbar.classList.add('scrolled');
+    } else {
+      navbar.classList.remove('scrolled');
+    }
+  });
+
+  // Mobile menu
+  const menuToggle = document.getElementById('menuToggle');
+  const mobileMenu = document.getElementById('mobileMenu');
+  menuToggle.addEventListener('click', () => {
+    menuToggle.classList.toggle('active');
+    mobileMenu.classList.toggle('active');
+    document.body.style.overflow = mobileMenu.classList.contains('active') ? 'hidden' : '';
+    menuToggle.setAttribute('aria-expanded', mobileMenu.classList.contains('active'));
+  });
+
+  // Scroll reveal
+  const revealElements = document.querySelectorAll('.reveal, .reveal-left, .reveal-right, .reveal-scale');
+  const revealObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+      }
+    });
+  }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+  revealElements.forEach(el => revealObserver.observe(el));
+
+  // Counter animation
+  function animateCounter(el) {
+    const target = parseInt(el.getAttribute('data-target'));
+    const suffix = el.getAttribute('data-suffix') || '';
+    const prefix = el.getAttribute('data-prefix') || '';
+    const duration = 2000;
+    const start = performance.now();
+    function update(now) {
+      const elapsed = now - start;
+      const progress = Math.min(elapsed / duration, 1);
+      const eased = 1 - Math.pow(1 - progress, 3);
+      const current = Math.round(target * eased);
+      el.textContent = prefix + current.toLocaleString() + suffix;
+      if (progress < 1) requestAnimationFrame(update);
+    }
+    requestAnimationFrame(update);
+  }
+
+  const counterElements = document.querySelectorAll('[data-counter]');
+  const counterObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        animateCounter(entry.target);
+        counterObserver.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.5 });
+  counterElements.forEach(el => counterObserver.observe(el));
+
+  // Back to top
+  const backToTop = document.getElementById('backToTop');
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 600) {
+      backToTop.classList.add('visible');
+    } else {
+      backToTop.classList.remove('visible');
+    }
+  });
+  backToTop.addEventListener('click', () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+
+  // ===================== TESTIMONIAL CAROUSEL =====================
+  const track = document.getElementById('testimonialTrack');
+  const dots = document.querySelectorAll('.testimonial-dot');
+  let currentSlide = 0;
+  let autoSlide;
+
+  function goToSlide(index) {
+    currentSlide = index;
+    track.style.transform = `translateX(-${index * 100}%)`;
+    dots.forEach((d, i) => d.classList.toggle('active', i === index));
+  }
+
+  dots.forEach(dot => {
+    dot.addEventListener('click', () => {
+      goToSlide(parseInt(dot.dataset.index));
+      resetAutoSlide();
+    });
+  });
+
+  function resetAutoSlide() {
+    clearInterval(autoSlide);
+    autoSlide = setInterval(() => goToSlide((currentSlide + 1) % 3), 6000);
+  }
+  resetAutoSlide();
+  
+    // Scroll Progress Bar
+    const scrollProg = document.getElementById('scrollProgress');
+    if (scrollProg) {
+      window.addEventListener('scroll', () => {
+        const pct = (window.scrollY / (document.documentElement.scrollHeight - window.innerHeight)) * 100;
+        scrollProg.style.width = pct + '%';
+      }, { passive: true });
+    }
+
+    // Image Lazy Load Fade-In
+    document.querySelectorAll('img[loading="lazy"]').forEach(img => {
+      img.style.opacity = '0';
+      img.style.transition = 'opacity 0.8s ease';
+      if (img.complete) { img.style.opacity = '1'; }
+      else { img.addEventListener('load', () => { img.style.opacity = '1'; }); }
+    });
+
+    // Card Mouse Tilt Effect
+    document.querySelectorAll('.card-segment, .card-value, .card-insight, .card-scenario').forEach(card => {
+      card.addEventListener('mousemove', (e) => {
+        const r = card.getBoundingClientRect();
+        const x = (e.clientX - r.left) / r.width - 0.5;
+        const y = (e.clientY - r.top) / r.height - 0.5;
+        card.style.transform = `perspective(800px) rotateX(${-y*5}deg) rotateY(${x*5}deg) translateY(-6px) scale(1.02)`;
+      });
+      card.addEventListener('mouseleave', () => {
+        card.style.transform = '';
+        card.style.transition = 'transform 0.5s cubic-bezier(0.23, 1, 0.32, 1)';
+        setTimeout(() => card.style.transition = '', 500);
+      });
+    });
+
+    // Staggered Grid Reveal
+    document.querySelectorAll('.grid').forEach(g => {
+      const items = g.querySelectorAll('.card, .stat-card, .award-item');
+      const gObs = new IntersectionObserver((e) => {
+        if (e[0].isIntersecting) {
+          items.forEach((c, i) => setTimeout(() => { c.style.opacity='1'; c.style.transform='translateY(0)'; }, i*120));
+          gObs.disconnect();
+        }
+      }, { threshold: 0.15 });
+      if (items.length) {
+        items.forEach(c => { c.style.opacity='0'; c.style.transform='translateY(30px)'; c.style.transition='opacity 0.6s ease, transform 0.6s cubic-bezier(0.23, 1, 0.32, 1)'; });
+        gObs.observe(g);
+      }
+    });
+</script>
+
+</body>
+</html>
