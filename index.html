@@ -50,7 +50,7 @@
       top: 12%;
       width: 200px;
       height: 200px;
-      opacity: 0.13;
+      opacity: 0.18;
     }
 
     /* Right bottom */
@@ -59,7 +59,7 @@
       bottom: 8%;
       width: 200px;
       height: 200px;
-      opacity: 0.13;
+      opacity: 0.18;
     }
 
     @media (max-width: 1200px) {
@@ -539,41 +539,66 @@
       </svg>
     </div>
 
-    <!-- Right bottom: Starburst / sun-ray pattern -->
+    <!-- Right bottom: Armillary sphere / Celestial globe (navigational & global alignment theme) -->
     <div class="ornament ornament--right-bottom" data-speed="0.7" data-direction="-1">
       <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" fill="none">
-        <!-- Outer ring -->
-        <circle cx="100" cy="100" r="90" stroke="#4B5563" stroke-width="1"/>
-        <!-- Middle dashed ring -->
-        <circle cx="100" cy="100" r="65" stroke="#4B5563" stroke-width="0.8" stroke-dasharray="3 4"/>
-        <!-- Inner ring -->
-        <circle cx="100" cy="100" r="38" stroke="#4B5563" stroke-width="1"/>
-        <!-- 12 radial sun rays -->
-        <line x1="100" y1="10" x2="100" y2="62" stroke="#4B5563" stroke-width="0.9"/>
-        <line x1="100" y1="138" x2="100" y2="190" stroke="#4B5563" stroke-width="0.9"/>
-        <line x1="10" y1="100" x2="62" y2="100" stroke="#4B5563" stroke-width="0.9"/>
-        <line x1="138" y1="100" x2="190" y2="100" stroke="#4B5563" stroke-width="0.9"/>
-        <line x1="36" y1="36" x2="72" y2="72" stroke="#4B5563" stroke-width="0.7"/>
-        <line x1="128" y1="128" x2="164" y2="164" stroke="#4B5563" stroke-width="0.7"/>
-        <line x1="164" y1="36" x2="128" y2="72" stroke="#4B5563" stroke-width="0.7"/>
-        <line x1="72" y1="128" x2="36" y2="164" stroke="#4B5563" stroke-width="0.7"/>
-        <!-- Extra intermediate rays -->
-        <line x1="67" y1="18" x2="80" y2="62" stroke="#4B5563" stroke-width="0.5"/>
-        <line x1="133" y1="18" x2="120" y2="62" stroke="#4B5563" stroke-width="0.5"/>
-        <line x1="18" y1="67" x2="62" y2="80" stroke="#4B5563" stroke-width="0.5"/>
-        <line x1="18" y1="133" x2="62" y2="120" stroke="#4B5563" stroke-width="0.5"/>
-        <line x1="182" y1="67" x2="138" y2="80" stroke="#4B5563" stroke-width="0.5"/>
-        <line x1="182" y1="133" x2="138" y2="120" stroke="#4B5563" stroke-width="0.5"/>
-        <line x1="67" y1="182" x2="80" y2="138" stroke="#4B5563" stroke-width="0.5"/>
-        <line x1="133" y1="182" x2="120" y2="138" stroke="#4B5563" stroke-width="0.5"/>
-        <!-- Small dots at cardinal tips -->
-        <circle cx="100" cy="10" r="2.5" fill="#4B5563" opacity="0.6"/>
-        <circle cx="100" cy="190" r="2.5" fill="#4B5563" opacity="0.6"/>
-        <circle cx="10" cy="100" r="2.5" fill="#4B5563" opacity="0.6"/>
-        <circle cx="190" cy="100" r="2.5" fill="#4B5563" opacity="0.6"/>
-        <!-- Center dot -->
-        <circle cx="100" cy="100" r="5" fill="#4B5563" opacity="0.6"/>
-        <circle cx="100" cy="100" r="2" fill="#4B5563" opacity="0.9"/>
+        <!-- Outer coordinate ring -->
+        <circle cx="100" cy="100" r="90" stroke="#4B5563" stroke-width="1.2"/>
+        <!-- Degree ticks on outer ring -->
+        <line x1="100" y1="10" x2="100" y2="16" stroke="#4B5563" stroke-width="1"/>
+        <line x1="100" y1="184" x2="100" y2="190" stroke="#4B5563" stroke-width="1"/>
+        <line x1="184" y1="100" x2="190" y2="100" stroke="#4B5563" stroke-width="1"/>
+        <line x1="10" y1="100" x2="16" y2="100" stroke="#4B5563" stroke-width="1"/>
+        <!-- 30/60 degree ticks -->
+        <line x1="145" y1="22" x2="142" y2="27" stroke="#4B5563" stroke-width="0.8"/>
+        <line x1="178" y1="55" x2="173" y2="58" stroke="#4B5563" stroke-width="0.8"/>
+        <line x1="178" y1="145" x2="173" y2="142" stroke="#4B5563" stroke-width="0.8"/>
+        <line x1="145" y1="178" x2="142" y2="173" stroke="#4B5563" stroke-width="0.8"/>
+        <line x1="55" y1="178" x2="58" y2="173" stroke="#4B5563" stroke-width="0.8"/>
+        <line x1="22" y1="145" x2="27" y2="142" stroke="#4B5563" stroke-width="0.8"/>
+        <line x1="22" y1="55" x2="27" y2="58" stroke="#4B5563" stroke-width="0.8"/>
+        <line x1="55" y1="22" x2="58" y2="27" stroke="#4B5563" stroke-width="0.8"/>
+
+        <!-- Astrolabe/Armillary rings -->
+        <ellipse cx="100" cy="100" rx="90" ry="22" stroke="#4B5563" stroke-width="1"/>
+        <ellipse cx="100" cy="75" rx="78" ry="15" stroke="#4B5563" stroke-width="0.6" stroke-dasharray="3 3"/>
+        <ellipse cx="100" cy="125" rx="78" ry="15" stroke="#4B5563" stroke-width="0.6" stroke-dasharray="3 3"/>
+
+        <!-- Meridian ring -->
+        <ellipse cx="100" cy="100" rx="30" ry="90" stroke="#4B5563" stroke-width="1"/>
+
+        <!-- Ecliptic band (angled wide band / ellipse representing astronomical path) -->
+        <g transform="rotate(-23.5 100 100)">
+          <ellipse cx="100" cy="100" rx="90" ry="32" stroke="#4B5563" stroke-width="1.2"/>
+          <ellipse cx="100" cy="100" rx="82" ry="29" stroke="#4B5563" stroke-width="0.8"/>
+          <!-- Intermediate ticks inside ecliptic band -->
+          <line x1="100" y1="68" x2="100" y2="71" stroke="#4B5563" stroke-width="0.8"/>
+          <line x1="100" y1="129" x2="100" y2="132" stroke="#4B5563" stroke-width="0.8"/>
+          <line x1="18" y1="100" x2="21" y2="100" stroke="#4B5563" stroke-width="0.8"/>
+          <line x1="179" y1="100" x2="182" y2="100" stroke="#4B5563" stroke-width="0.8"/>
+          <!-- Star details on ecliptic path -->
+          <circle cx="50" cy="85" r="1.5" fill="#4B5563" opacity="0.8"/>
+          <circle cx="150" cy="115" r="1.5" fill="#4B5563" opacity="0.8"/>
+          <circle cx="70" cy="76" r="1.2" fill="#4B5563" opacity="0.8"/>
+          <circle cx="130" cy="124" r="1.2" fill="#4B5563" opacity="0.8"/>
+        </g>
+
+        <!-- Polar Axis -->
+        <g transform="rotate(45 100 100)">
+          <line x1="100" y1="2" x2="100" y2="198" stroke="#4B5563" stroke-width="1.5"/>
+          <polygon points="100,2 104,18 100,13 96,18" fill="#4B5563" opacity="0.8"/>
+          <circle cx="100" cy="198" r="3" fill="#4B5563" opacity="0.8"/>
+        </g>
+
+        <!-- Central Earth Globe (Wireframe) -->
+        <circle cx="100" cy="100" r="22" stroke="#4B5563" stroke-width="1"/>
+        <line x1="78" y1="100" x2="122" y2="100" stroke="#4B5563" stroke-width="0.8"/>
+        <ellipse cx="100" cy="100" rx="22" ry="8" stroke="#4B5563" stroke-width="0.6" stroke-dasharray="2 2"/>
+        <line x1="100" y1="78" x2="100" y2="122" stroke="#4B5563" stroke-width="0.8"/>
+        <ellipse cx="100" cy="100" rx="8" ry="22" stroke="#4B5563" stroke-width="0.6"/>
+
+        <!-- Center pivot pin -->
+        <circle cx="100" cy="100" r="3.5" fill="#4B5563" opacity="0.9"/>
       </svg>
     </div>
 
