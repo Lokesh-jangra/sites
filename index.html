@@ -23,8 +23,8 @@
     rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
   <style>
-    /* ---- Scroll-Rotating Gear Decorations ---- */
-    .scroll-gears {
+    /* ---- Scroll-Rotating Decorative Compass Elements ---- */
+    .scroll-ornaments {
       position: fixed;
       top: 0;
       left: 0;
@@ -34,84 +34,92 @@
       z-index: 0;
     }
 
-    .gear {
+    .ornament {
       position: fixed;
-      opacity: 0.6;
-      transition: opacity 0.3s ease;
       will-change: transform;
     }
 
-    .gear svg {
+    .ornament svg {
       width: 100%;
       height: 100%;
     }
 
-    /* Left side gears */
-    .gear--left-1 {
-      left: -60px;
-      top: 15%;
-      width: 180px;
-      height: 180px;
+    /* Left side */
+    .ornament--left-1 {
+      left: -55px;
+      top: 12%;
+      width: 200px;
+      height: 200px;
+      opacity: 0.9;
     }
 
-    .gear--left-2 {
-      left: 20px;
-      top: 42%;
-      width: 120px;
-      height: 120px;
-      opacity: 0.045;
-    }
-
-    .gear--left-3 {
-      left: -30px;
-      top: 72%;
-      width: 150px;
-      height: 150px;
-      opacity: 0.05;
-    }
-
-    /* Right side gears */
-    .gear--right-1 {
-      right: -50px;
-      top: 22%;
-      width: 160px;
-      height: 160px;
-    }
-
-    .gear--right-2 {
-      right: 30px;
-      top: 55%;
+    .ornament--left-2 {
+      left: 15px;
+      top: 48%;
       width: 130px;
       height: 130px;
-      opacity: 0.045;
+      opacity: 0.055;
     }
 
-    .gear--right-3 {
-      right: -40px;
-      top: 80%;
+    .ornament--left-3 {
+      left: -35px;
+      top: 78%;
+      width: 160px;
+      height: 160px;
+      opacity: 1;
+    }
+
+    /* Right side */
+    .ornament--right-1 {
+      right: -45px;
+      top: 18%;
+      width: 180px;
+      height: 180px;
+      opacity: 0.07;
+    }
+
+    .ornament--right-2 {
+      right: 20px;
+      top: 52%;
       width: 140px;
       height: 140px;
-      opacity: 0.05;
+      opacity: 0.055;
+    }
+
+    .ornament--right-3 {
+      right: -40px;
+      top: 82%;
+      width: 150px;
+      height: 150px;
+      opacity: 0.06;
+    }
+
+    @media (max-width: 1200px) {
+      .ornament--left-1 { left: -80px; }
+      .ornament--right-1 { right: -70px; }
+      .ornament--left-3 { left: -60px; }
+      .ornament--right-3 { right: -60px; }
     }
 
     @media (max-width: 1024px) {
-      .gear--left-1, .gear--left-3, .gear--right-1, .gear--right-3 {
+      .ornament--left-1, .ornament--left-3,
+      .ornament--right-1, .ornament--right-3 {
         display: none;
       }
-      .gear--left-2 {
-        left: -40px;
-        width: 90px;
-        height: 90px;
+      .ornament--left-2 {
+        left: -50px;
+        width: 100px;
+        height: 100px;
       }
-      .gear--right-2 {
-        right: -40px;
-        width: 90px;
-        height: 90px;
+      .ornament--right-2 {
+        right: -50px;
+        width: 100px;
+        height: 100px;
       }
     }
 
     @media (max-width: 768px) {
-      .scroll-gears {
+      .scroll-ornaments {
         display: none;
       }
     }
@@ -543,53 +551,128 @@
 <body>
   <a href="#main" class="skip-link">Skip to main content</a>
 
-  <!-- Scroll-Rotating Gear Decorations -->
-  <div class="scroll-gears" aria-hidden="true">
-    <!-- Left gears -->
-    <div class="gear gear--left-1" data-gear-speed="1" data-gear-direction="1">
-      <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-        <path d="M50 10 L54 10 L56 4 L60 2 L64 4 L66 10 L70 10 L74 6 L78 6 L82 10 L82 14 L88 16 L90 20 L88 24 L82 26 L82 30 L86 34 L86 38 L82 42 L78 42 L76 48 L78 52 L76 56 L70 54 L66 56 L64 62 L60 64 L56 62 L54 56 L50 54 L46 56 L44 62 L40 64 L36 62 L34 56 L30 54 L24 56 L22 52 L24 48 L22 42 L18 42 L14 38 L14 34 L18 30 L18 26 L12 24 L10 20 L12 16 L18 14 L18 10 L22 6 L26 6 L30 10 L34 10 L36 4 L40 2 L44 4 L46 10 Z" fill="var(--gold-400)" />
-        <circle cx="50" cy="33" r="16" fill="var(--navy-950)" />
-        <circle cx="50" cy="33" r="10" fill="var(--gold-400)" opacity="0.3" />
-      </svg>
-    </div>
-    <div class="gear gear--left-2" data-gear-speed="0.6" data-gear-direction="-1">
-      <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-        <path d="M50 8 L55 8 L58 2 L62 0 L66 2 L69 8 L74 10 L78 6 L82 8 L84 14 L82 18 L88 22 L88 28 L82 32 L84 36 L88 40 L86 44 L80 44 L78 50 L82 54 L80 58 L74 56 L69 58 L66 64 L62 66 L58 64 L55 58 L50 56 L45 58 L42 64 L38 66 L34 64 L31 58 L26 56 L20 58 L18 54 L22 50 L20 44 L14 44 L12 40 L16 36 L14 32 L8 28 L8 22 L14 18 L12 14 L16 8 L20 6 L26 10 L31 8 L34 2 L38 0 L42 2 L45 8 Z" fill="var(--gold-500)" />
-        <circle cx="50" cy="33" r="14" fill="var(--navy-950)" />
-        <circle cx="50" cy="33" r="8" fill="var(--gold-500)" opacity="0.25" />
-      </svg>
-    </div>
-    <div class="gear gear--left-3" data-gear-speed="0.8" data-gear-direction="1">
-      <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-        <path d="M50 12 L53 12 L56 6 L60 4 L64 6 L67 12 L70 12 L74 8 L78 8 L80 14 L78 18 L84 20 L86 24 L84 28 L78 30 L80 34 L84 38 L82 42 L76 42 L74 46 L76 50 L74 54 L68 52 L64 54 L62 60 L58 62 L54 60 L52 54 L48 52 L42 54 L40 50 L42 46 L40 42 L34 42 L32 38 L36 34 L34 30 L28 28 L26 24 L28 20 L34 18 L32 14 L36 8 L40 8 L44 12 L47 12 L50 6 L54 4 L58 6 L56 12 Z" fill="var(--gold-300)" />
-        <circle cx="53" cy="33" r="13" fill="var(--navy-950)" />
-        <circle cx="53" cy="33" r="7" fill="var(--gold-300)" opacity="0.3" />
+  <!-- Scroll-Rotating Decorative Compass Elements -->
+  <div class="scroll-ornaments" aria-hidden="true">
+
+    <!-- Left: Large compass rose -->
+    <div class="ornament ornament--left-1" data-gear-speed="0.8" data-gear-direction="1">
+      <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" fill="none">
+        <circle cx="100" cy="100" r="90" stroke="#9CA3AF" stroke-width="0.5"/>
+        <circle cx="100" cy="100" r="70" stroke="#9CA3AF" stroke-width="0.4" stroke-dasharray="4 6"/>
+        <circle cx="100" cy="100" r="50" stroke="#9CA3AF" stroke-width="0.5"/>
+        <circle cx="100" cy="100" r="28" stroke="#9CA3AF" stroke-width="0.3" stroke-dasharray="2 4"/>
+        <line x1="100" y1="5" x2="100" y2="195" stroke="#9CA3AF" stroke-width="0.4"/>
+        <line x1="5" y1="100" x2="195" y2="100" stroke="#9CA3AF" stroke-width="0.4"/>
+        <line x1="27" y1="27" x2="173" y2="173" stroke="#9CA3AF" stroke-width="0.3"/>
+        <line x1="173" y1="27" x2="27" y2="173" stroke="#9CA3AF" stroke-width="0.3"/>
+        <!-- Cardinal points -->
+        <polygon points="100,8 104,30 100,24 96,30" fill="#9CA3AF" opacity="0.5"/>
+        <polygon points="100,192 104,170 100,176 96,170" fill="#9CA3AF" opacity="0.5"/>
+        <polygon points="8,100 30,96 24,100 30,104" fill="#9CA3AF" opacity="0.5"/>
+        <polygon points="192,100 170,96 176,100 170,104" fill="#9CA3AF" opacity="0.5"/>
+        <!-- Tick marks on outer ring -->
+        <line x1="100" y1="10" x2="100" y2="18" stroke="#9CA3AF" stroke-width="0.6"/>
+        <line x1="100" y1="182" x2="100" y2="190" stroke="#9CA3AF" stroke-width="0.6"/>
+        <line x1="10" y1="100" x2="18" y2="100" stroke="#9CA3AF" stroke-width="0.6"/>
+        <line x1="182" y1="100" x2="190" y2="100" stroke="#9CA3AF" stroke-width="0.6"/>
+        <circle cx="100" cy="100" r="4" fill="#9CA3AF" opacity="0.4"/>
       </svg>
     </div>
 
-    <!-- Right gears -->
-    <div class="gear gear--right-1" data-gear-speed="0.9" data-gear-direction="-1">
-      <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-        <path d="M50 10 L54 10 L56 4 L60 2 L64 4 L66 10 L70 10 L74 6 L78 6 L82 10 L82 14 L88 16 L90 20 L88 24 L82 26 L82 30 L86 34 L86 38 L82 42 L78 42 L76 48 L78 52 L76 56 L70 54 L66 56 L64 62 L60 64 L56 62 L54 56 L50 54 L46 56 L44 62 L40 64 L36 62 L34 56 L30 54 L24 56 L22 52 L24 48 L22 42 L18 42 L14 38 L14 34 L18 30 L18 26 L12 24 L10 20 L12 16 L18 14 L18 10 L22 6 L26 6 L30 10 L34 10 L36 4 L40 2 L44 4 L46 10 Z" fill="var(--gold-400)" />
-        <circle cx="50" cy="33" r="16" fill="var(--navy-950)" />
-        <circle cx="50" cy="33" r="10" fill="var(--gold-400)" opacity="0.3" />
+    <!-- Left: Concentric rings -->
+    <div class="ornament ornament--left-2" data-gear-speed="0.5" data-gear-direction="-1">
+      <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" fill="none">
+        <circle cx="100" cy="100" r="85" stroke="#D1D5DB" stroke-width="0.5" stroke-dasharray="8 4"/>
+        <circle cx="100" cy="100" r="65" stroke="#D1D5DB" stroke-width="0.4"/>
+        <circle cx="100" cy="100" r="45" stroke="#D1D5DB" stroke-width="0.5" stroke-dasharray="3 5"/>
+        <circle cx="100" cy="100" r="25" stroke="#D1D5DB" stroke-width="0.4"/>
+        <!-- Cross lines -->
+        <line x1="100" y1="15" x2="100" y2="185" stroke="#D1D5DB" stroke-width="0.3"/>
+        <line x1="15" y1="100" x2="185" y2="100" stroke="#D1D5DB" stroke-width="0.3"/>
+        <!-- Diagonal ticks -->
+        <line x1="40" y1="40" x2="50" y2="50" stroke="#D1D5DB" stroke-width="0.4"/>
+        <line x1="160" y1="40" x2="150" y2="50" stroke="#D1D5DB" stroke-width="0.4"/>
+        <line x1="40" y1="160" x2="50" y2="150" stroke="#D1D5DB" stroke-width="0.4"/>
+        <line x1="160" y1="160" x2="150" y2="150" stroke="#D1D5DB" stroke-width="0.4"/>
+        <circle cx="100" cy="100" r="3" fill="#D1D5DB" opacity="0.5"/>
       </svg>
     </div>
-    <div class="gear gear--right-2" data-gear-speed="0.7" data-gear-direction="1">
-      <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-        <path d="M50 8 L55 8 L58 2 L62 0 L66 2 L69 8 L74 10 L78 6 L82 8 L84 14 L82 18 L88 22 L88 28 L82 32 L84 36 L88 40 L86 44 L80 44 L78 50 L82 54 L80 58 L74 56 L69 58 L66 64 L62 66 L58 64 L55 58 L50 56 L45 58 L42 64 L38 66 L34 64 L31 58 L26 56 L20 58 L18 54 L22 50 L20 44 L14 44 L12 40 L16 36 L14 32 L8 28 L8 22 L14 18 L12 14 L16 8 L20 6 L26 10 L31 8 L34 2 L38 0 L42 2 L45 8 Z" fill="var(--gold-500)" />
-        <circle cx="50" cy="33" r="14" fill="var(--navy-950)" />
-        <circle cx="50" cy="33" r="8" fill="var(--gold-500)" opacity="0.25" />
+
+    <!-- Left: Diamond crosshair -->
+    <div class="ornament ornament--left-3" data-gear-speed="0.65" data-gear-direction="1">
+      <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" fill="none">
+        <circle cx="100" cy="100" r="80" stroke="#9CA3AF" stroke-width="0.4"/>
+        <circle cx="100" cy="100" r="55" stroke="#9CA3AF" stroke-width="0.35" stroke-dasharray="6 3"/>
+        <rect x="50" y="50" width="100" height="100" stroke="#9CA3AF" stroke-width="0.35" transform="rotate(45 100 100)"/>
+        <rect x="65" y="65" width="70" height="70" stroke="#9CA3AF" stroke-width="0.3" transform="rotate(45 100 100)"/>
+        <line x1="100" y1="20" x2="100" y2="180" stroke="#9CA3AF" stroke-width="0.3"/>
+        <line x1="20" y1="100" x2="180" y2="100" stroke="#9CA3AF" stroke-width="0.3"/>
+        <circle cx="100" cy="100" r="3" fill="#9CA3AF" opacity="0.35"/>
       </svg>
     </div>
-    <div class="gear gear--right-3" data-gear-speed="1.1" data-gear-direction="-1">
-      <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-        <path d="M50 12 L53 12 L56 6 L60 4 L64 6 L67 12 L70 12 L74 8 L78 8 L80 14 L78 18 L84 20 L86 24 L84 28 L78 30 L80 34 L84 38 L82 42 L76 42 L74 46 L76 50 L74 54 L68 52 L64 54 L62 60 L58 62 L54 60 L52 54 L48 52 L42 54 L40 50 L42 46 L40 42 L34 42 L32 38 L36 34 L34 30 L28 28 L26 24 L28 20 L34 18 L32 14 L36 8 L40 8 L44 12 L47 12 L50 6 L54 4 L58 6 L56 12 Z" fill="var(--gold-300)" />
-        <circle cx="53" cy="33" r="13" fill="var(--navy-950)" />
-        <circle cx="53" cy="33" r="7" fill="var(--gold-300)" opacity="0.3" />
+
+    <!-- Right: Large compass rose (mirrored style) -->
+    <div class="ornament ornament--right-1" data-gear-speed="0.7" data-gear-direction="-1">
+      <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" fill="none">
+        <circle cx="100" cy="100" r="88" stroke="#D1D5DB" stroke-width="0.4" stroke-dasharray="2 4"/>
+        <circle cx="100" cy="100" r="72" stroke="#D1D5DB" stroke-width="0.5"/>
+        <circle cx="100" cy="100" r="52" stroke="#D1D5DB" stroke-width="0.4" stroke-dasharray="6 4"/>
+        <circle cx="100" cy="100" r="32" stroke="#D1D5DB" stroke-width="0.3"/>
+        <!-- 8-point star lines -->
+        <line x1="100" y1="8" x2="100" y2="192" stroke="#D1D5DB" stroke-width="0.35"/>
+        <line x1="8" y1="100" x2="192" y2="100" stroke="#D1D5DB" stroke-width="0.35"/>
+        <line x1="25" y1="25" x2="175" y2="175" stroke="#D1D5DB" stroke-width="0.25"/>
+        <line x1="175" y1="25" x2="25" y2="175" stroke="#D1D5DB" stroke-width="0.25"/>
+        <!-- Arrowheads -->
+        <polygon points="100,10 103,26 100,20 97,26" fill="#D1D5DB" opacity="0.45"/>
+        <polygon points="190,100 174,97 180,100 174,103" fill="#D1D5DB" opacity="0.45"/>
+        <polygon points="100,190 103,174 100,180 97,174" fill="#D1D5DB" opacity="0.45"/>
+        <polygon points="10,100 26,97 20,100 26,103" fill="#D1D5DB" opacity="0.45"/>
+        <!-- Minor tick marks -->
+        <line x1="144" y1="10" x2="140" y2="18" stroke="#D1D5DB" stroke-width="0.3"/>
+        <line x1="56" y1="10" x2="60" y2="18" stroke="#D1D5DB" stroke-width="0.3"/>
+        <line x1="190" y1="56" x2="182" y2="60" stroke="#D1D5DB" stroke-width="0.3"/>
+        <line x1="190" y1="144" x2="182" y2="140" stroke="#D1D5DB" stroke-width="0.3"/>
+        <circle cx="100" cy="100" r="4" fill="#D1D5DB" opacity="0.35"/>
       </svg>
     </div>
+
+    <!-- Right: Orbital rings -->
+    <div class="ornament ornament--right-2" data-gear-speed="0.55" data-gear-direction="1">
+      <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" fill="none">
+        <circle cx="100" cy="100" r="82" stroke="#9CA3AF" stroke-width="0.5"/>
+        <circle cx="100" cy="100" r="60" stroke="#9CA3AF" stroke-width="0.35" stroke-dasharray="5 5"/>
+        <circle cx="100" cy="100" r="40" stroke="#9CA3AF" stroke-width="0.45"/>
+        <circle cx="100" cy="100" r="20" stroke="#9CA3AF" stroke-width="0.3" stroke-dasharray="2 3"/>
+        <!-- Radial lines -->
+        <line x1="100" y1="18" x2="100" y2="180" stroke="#9CA3AF" stroke-width="0.3"/>
+        <line x1="18" y1="100" x2="182" y2="100" stroke="#9CA3AF" stroke-width="0.3"/>
+        <!-- Small dots at intersections -->
+        <circle cx="100" cy="18" r="2" fill="#9CA3AF" opacity="0.5"/>
+        <circle cx="100" cy="182" r="2" fill="#9CA3AF" opacity="0.5"/>
+        <circle cx="18" cy="100" r="2" fill="#9CA3AF" opacity="0.5"/>
+        <circle cx="182" cy="100" r="2" fill="#9CA3AF" opacity="0.5"/>
+        <circle cx="100" cy="100" r="3" fill="#9CA3AF" opacity="0.4"/>
+      </svg>
+    </div>
+
+    <!-- Right: Geometric frame -->
+    <div class="ornament ornament--right-3" data-gear-speed="0.9" data-gear-direction="-1">
+      <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" fill="none">
+        <circle cx="100" cy="100" r="85" stroke="#D1D5DB" stroke-width="0.45"/>
+        <circle cx="100" cy="100" r="60" stroke="#D1D5DB" stroke-width="0.35"/>
+        <rect x="45" y="45" width="110" height="110" stroke="#D1D5DB" stroke-width="0.3" transform="rotate(45 100 100)"/>
+        <!-- Cross with serif ends -->
+        <line x1="100" y1="15" x2="100" y2="185" stroke="#D1D5DB" stroke-width="0.3"/>
+        <line x1="15" y1="100" x2="185" y2="100" stroke="#D1D5DB" stroke-width="0.3"/>
+        <line x1="95" y1="15" x2="105" y2="15" stroke="#D1D5DB" stroke-width="0.4"/>
+        <line x1="95" y1="185" x2="105" y2="185" stroke="#D1D5DB" stroke-width="0.4"/>
+        <line x1="15" y1="95" x2="15" y2="105" stroke="#D1D5DB" stroke-width="0.4"/>
+        <line x1="185" y1="95" x2="185" y2="105" stroke="#D1D5DB" stroke-width="0.4"/>
+        <circle cx="100" cy="100" r="3" fill="#D1D5DB" opacity="0.4"/>
+      </svg>
+    </div>
+
   </div>
 
   <!-- Loading Screen -->
@@ -1438,34 +1521,34 @@
     })();
   </script>
 
-  <!-- Scroll-Rotating Gears Script -->
+  <!-- Scroll-Rotating Ornaments Script -->
   <script>
     (function () {
-      const gears = document.querySelectorAll('.gear');
-      if (!gears.length) return;
+      const ornaments = document.querySelectorAll('.ornament');
+      if (!ornaments.length) return;
 
       let ticking = false;
 
-      function updateGears() {
+      function updateOrnaments() {
         const scrollY = window.scrollY;
-        gears.forEach(gear => {
-          const speed = parseFloat(gear.dataset.gearSpeed) || 1;
-          const direction = parseInt(gear.dataset.gearDirection) || 1;
-          const rotation = scrollY * speed * direction * 0.15;
-          gear.style.transform = `rotate(${rotation}deg)`;
+        ornaments.forEach(el => {
+          const speed = parseFloat(el.dataset.gearSpeed) || 1;
+          const direction = parseInt(el.dataset.gearDirection) || 1;
+          const rotation = scrollY * speed * direction * 0.12;
+          el.style.transform = `rotate(${rotation}deg)`;
         });
         ticking = false;
       }
 
       window.addEventListener('scroll', () => {
         if (!ticking) {
-          requestAnimationFrame(updateGears);
+          requestAnimationFrame(updateOrnaments);
           ticking = true;
         }
       }, { passive: true });
 
       // Initial state
-      updateGears();
+      updateOrnaments();
     })();
   </script>
 
