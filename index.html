@@ -44,77 +44,39 @@
       height: 100%;
     }
 
-    /* Left side */
+    /* Left top */
     .ornament--left-1 {
-      left: -55px;
+      left: -20px;
       top: 12%;
       width: 200px;
       height: 200px;
-      opacity: 0.9;
+      opacity: 0.13;
     }
 
-    .ornament--left-2 {
-      left: 15px;
-      top: 48%;
-      width: 130px;
-      height: 130px;
-      opacity: 0.055;
-    }
-
-    .ornament--left-3 {
-      left: -35px;
-      top: 78%;
-      width: 160px;
-      height: 160px;
-      opacity: 1;
-    }
-
-    /* Right side */
-    .ornament--right-1 {
-      right: -45px;
-      top: 18%;
-      width: 180px;
-      height: 180px;
-      opacity: 0.07;
-    }
-
-    .ornament--right-2 {
-      right: 20px;
-      top: 52%;
-      width: 140px;
-      height: 140px;
-      opacity: 0.055;
-    }
-
-    .ornament--right-3 {
-      right: -40px;
-      top: 82%;
-      width: 150px;
-      height: 150px;
-      opacity: 0.06;
+    /* Right bottom */
+    .ornament--right-bottom {
+      right: -10px;
+      bottom: 8%;
+      width: 200px;
+      height: 200px;
+      opacity: 0.13;
     }
 
     @media (max-width: 1200px) {
-      .ornament--left-1 { left: -80px; }
-      .ornament--right-1 { right: -70px; }
-      .ornament--left-3 { left: -60px; }
-      .ornament--right-3 { right: -60px; }
+      .ornament--left-1 { left: -50px; }
+      .ornament--right-bottom { right: -40px; }
     }
 
     @media (max-width: 1024px) {
-      .ornament--left-1, .ornament--left-3,
-      .ornament--right-1, .ornament--right-3 {
-        display: none;
+      .ornament--left-1 {
+        left: -60px;
+        width: 160px;
+        height: 160px;
       }
-      .ornament--left-2 {
-        left: -50px;
-        width: 100px;
-        height: 100px;
-      }
-      .ornament--right-2 {
+      .ornament--right-bottom {
         right: -50px;
-        width: 100px;
-        height: 100px;
+        width: 160px;
+        height: 160px;
       }
     }
 
@@ -554,122 +516,64 @@
   <!-- Scroll-Rotating Decorative Compass Elements -->
   <div class="scroll-ornaments" aria-hidden="true">
 
-    <!-- Left: Large compass rose -->
-    <div class="ornament ornament--left-1" data-gear-speed="0.8" data-gear-direction="1">
+    <!-- Left top: Compass rose (kept as-is) -->
+    <div class="ornament ornament--left-1" data-speed="0.8" data-direction="1">
       <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" fill="none">
-        <circle cx="100" cy="100" r="90" stroke="#9CA3AF" stroke-width="0.5"/>
-        <circle cx="100" cy="100" r="70" stroke="#9CA3AF" stroke-width="0.4" stroke-dasharray="4 6"/>
-        <circle cx="100" cy="100" r="50" stroke="#9CA3AF" stroke-width="0.5"/>
-        <circle cx="100" cy="100" r="28" stroke="#9CA3AF" stroke-width="0.3" stroke-dasharray="2 4"/>
-        <line x1="100" y1="5" x2="100" y2="195" stroke="#9CA3AF" stroke-width="0.4"/>
-        <line x1="5" y1="100" x2="195" y2="100" stroke="#9CA3AF" stroke-width="0.4"/>
-        <line x1="27" y1="27" x2="173" y2="173" stroke="#9CA3AF" stroke-width="0.3"/>
-        <line x1="173" y1="27" x2="27" y2="173" stroke="#9CA3AF" stroke-width="0.3"/>
-        <!-- Cardinal points -->
-        <polygon points="100,8 104,30 100,24 96,30" fill="#9CA3AF" opacity="0.5"/>
-        <polygon points="100,192 104,170 100,176 96,170" fill="#9CA3AF" opacity="0.5"/>
-        <polygon points="8,100 30,96 24,100 30,104" fill="#9CA3AF" opacity="0.5"/>
-        <polygon points="192,100 170,96 176,100 170,104" fill="#9CA3AF" opacity="0.5"/>
-        <!-- Tick marks on outer ring -->
-        <line x1="100" y1="10" x2="100" y2="18" stroke="#9CA3AF" stroke-width="0.6"/>
-        <line x1="100" y1="182" x2="100" y2="190" stroke="#9CA3AF" stroke-width="0.6"/>
-        <line x1="10" y1="100" x2="18" y2="100" stroke="#9CA3AF" stroke-width="0.6"/>
-        <line x1="182" y1="100" x2="190" y2="100" stroke="#9CA3AF" stroke-width="0.6"/>
-        <circle cx="100" cy="100" r="4" fill="#9CA3AF" opacity="0.4"/>
+        <circle cx="100" cy="100" r="90" stroke="#4B5563" stroke-width="1.2"/>
+        <circle cx="100" cy="100" r="70" stroke="#4B5563" stroke-width="0.9" stroke-dasharray="4 6"/>
+        <circle cx="100" cy="100" r="50" stroke="#4B5563" stroke-width="1.1"/>
+        <circle cx="100" cy="100" r="28" stroke="#4B5563" stroke-width="0.7" stroke-dasharray="2 4"/>
+        <line x1="100" y1="5" x2="100" y2="195" stroke="#4B5563" stroke-width="0.8"/>
+        <line x1="5" y1="100" x2="195" y2="100" stroke="#4B5563" stroke-width="0.8"/>
+        <line x1="27" y1="27" x2="173" y2="173" stroke="#4B5563" stroke-width="0.6"/>
+        <line x1="173" y1="27" x2="27" y2="173" stroke="#4B5563" stroke-width="0.6"/>
+        <polygon points="100,6 105,32 100,24 95,32" fill="#4B5563" opacity="0.7"/>
+        <polygon points="100,194 105,168 100,176 95,168" fill="#4B5563" opacity="0.7"/>
+        <polygon points="6,100 32,95 24,100 32,105" fill="#4B5563" opacity="0.7"/>
+        <polygon points="194,100 168,95 176,100 168,105" fill="#4B5563" opacity="0.7"/>
+        <line x1="100" y1="10" x2="100" y2="20" stroke="#4B5563" stroke-width="1.2"/>
+        <line x1="100" y1="180" x2="100" y2="190" stroke="#4B5563" stroke-width="1.2"/>
+        <line x1="10" y1="100" x2="20" y2="100" stroke="#4B5563" stroke-width="1.2"/>
+        <line x1="180" y1="100" x2="190" y2="100" stroke="#4B5563" stroke-width="1.2"/>
+        <circle cx="100" cy="100" r="5" fill="#4B5563" opacity="0.6"/>
       </svg>
     </div>
 
-    <!-- Left: Concentric rings -->
-    <div class="ornament ornament--left-2" data-gear-speed="0.5" data-gear-direction="-1">
+    <!-- Right bottom: Starburst / sun-ray pattern -->
+    <div class="ornament ornament--right-bottom" data-speed="0.7" data-direction="-1">
       <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" fill="none">
-        <circle cx="100" cy="100" r="85" stroke="#D1D5DB" stroke-width="0.5" stroke-dasharray="8 4"/>
-        <circle cx="100" cy="100" r="65" stroke="#D1D5DB" stroke-width="0.4"/>
-        <circle cx="100" cy="100" r="45" stroke="#D1D5DB" stroke-width="0.5" stroke-dasharray="3 5"/>
-        <circle cx="100" cy="100" r="25" stroke="#D1D5DB" stroke-width="0.4"/>
-        <!-- Cross lines -->
-        <line x1="100" y1="15" x2="100" y2="185" stroke="#D1D5DB" stroke-width="0.3"/>
-        <line x1="15" y1="100" x2="185" y2="100" stroke="#D1D5DB" stroke-width="0.3"/>
-        <!-- Diagonal ticks -->
-        <line x1="40" y1="40" x2="50" y2="50" stroke="#D1D5DB" stroke-width="0.4"/>
-        <line x1="160" y1="40" x2="150" y2="50" stroke="#D1D5DB" stroke-width="0.4"/>
-        <line x1="40" y1="160" x2="50" y2="150" stroke="#D1D5DB" stroke-width="0.4"/>
-        <line x1="160" y1="160" x2="150" y2="150" stroke="#D1D5DB" stroke-width="0.4"/>
-        <circle cx="100" cy="100" r="3" fill="#D1D5DB" opacity="0.5"/>
-      </svg>
-    </div>
-
-    <!-- Left: Diamond crosshair -->
-    <div class="ornament ornament--left-3" data-gear-speed="0.65" data-gear-direction="1">
-      <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" fill="none">
-        <circle cx="100" cy="100" r="80" stroke="#9CA3AF" stroke-width="0.4"/>
-        <circle cx="100" cy="100" r="55" stroke="#9CA3AF" stroke-width="0.35" stroke-dasharray="6 3"/>
-        <rect x="50" y="50" width="100" height="100" stroke="#9CA3AF" stroke-width="0.35" transform="rotate(45 100 100)"/>
-        <rect x="65" y="65" width="70" height="70" stroke="#9CA3AF" stroke-width="0.3" transform="rotate(45 100 100)"/>
-        <line x1="100" y1="20" x2="100" y2="180" stroke="#9CA3AF" stroke-width="0.3"/>
-        <line x1="20" y1="100" x2="180" y2="100" stroke="#9CA3AF" stroke-width="0.3"/>
-        <circle cx="100" cy="100" r="3" fill="#9CA3AF" opacity="0.35"/>
-      </svg>
-    </div>
-
-    <!-- Right: Large compass rose (mirrored style) -->
-    <div class="ornament ornament--right-1" data-gear-speed="0.7" data-gear-direction="-1">
-      <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" fill="none">
-        <circle cx="100" cy="100" r="88" stroke="#D1D5DB" stroke-width="0.4" stroke-dasharray="2 4"/>
-        <circle cx="100" cy="100" r="72" stroke="#D1D5DB" stroke-width="0.5"/>
-        <circle cx="100" cy="100" r="52" stroke="#D1D5DB" stroke-width="0.4" stroke-dasharray="6 4"/>
-        <circle cx="100" cy="100" r="32" stroke="#D1D5DB" stroke-width="0.3"/>
-        <!-- 8-point star lines -->
-        <line x1="100" y1="8" x2="100" y2="192" stroke="#D1D5DB" stroke-width="0.35"/>
-        <line x1="8" y1="100" x2="192" y2="100" stroke="#D1D5DB" stroke-width="0.35"/>
-        <line x1="25" y1="25" x2="175" y2="175" stroke="#D1D5DB" stroke-width="0.25"/>
-        <line x1="175" y1="25" x2="25" y2="175" stroke="#D1D5DB" stroke-width="0.25"/>
-        <!-- Arrowheads -->
-        <polygon points="100,10 103,26 100,20 97,26" fill="#D1D5DB" opacity="0.45"/>
-        <polygon points="190,100 174,97 180,100 174,103" fill="#D1D5DB" opacity="0.45"/>
-        <polygon points="100,190 103,174 100,180 97,174" fill="#D1D5DB" opacity="0.45"/>
-        <polygon points="10,100 26,97 20,100 26,103" fill="#D1D5DB" opacity="0.45"/>
-        <!-- Minor tick marks -->
-        <line x1="144" y1="10" x2="140" y2="18" stroke="#D1D5DB" stroke-width="0.3"/>
-        <line x1="56" y1="10" x2="60" y2="18" stroke="#D1D5DB" stroke-width="0.3"/>
-        <line x1="190" y1="56" x2="182" y2="60" stroke="#D1D5DB" stroke-width="0.3"/>
-        <line x1="190" y1="144" x2="182" y2="140" stroke="#D1D5DB" stroke-width="0.3"/>
-        <circle cx="100" cy="100" r="4" fill="#D1D5DB" opacity="0.35"/>
-      </svg>
-    </div>
-
-    <!-- Right: Orbital rings -->
-    <div class="ornament ornament--right-2" data-gear-speed="0.55" data-gear-direction="1">
-      <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" fill="none">
-        <circle cx="100" cy="100" r="82" stroke="#9CA3AF" stroke-width="0.5"/>
-        <circle cx="100" cy="100" r="60" stroke="#9CA3AF" stroke-width="0.35" stroke-dasharray="5 5"/>
-        <circle cx="100" cy="100" r="40" stroke="#9CA3AF" stroke-width="0.45"/>
-        <circle cx="100" cy="100" r="20" stroke="#9CA3AF" stroke-width="0.3" stroke-dasharray="2 3"/>
-        <!-- Radial lines -->
-        <line x1="100" y1="18" x2="100" y2="180" stroke="#9CA3AF" stroke-width="0.3"/>
-        <line x1="18" y1="100" x2="182" y2="100" stroke="#9CA3AF" stroke-width="0.3"/>
-        <!-- Small dots at intersections -->
-        <circle cx="100" cy="18" r="2" fill="#9CA3AF" opacity="0.5"/>
-        <circle cx="100" cy="182" r="2" fill="#9CA3AF" opacity="0.5"/>
-        <circle cx="18" cy="100" r="2" fill="#9CA3AF" opacity="0.5"/>
-        <circle cx="182" cy="100" r="2" fill="#9CA3AF" opacity="0.5"/>
-        <circle cx="100" cy="100" r="3" fill="#9CA3AF" opacity="0.4"/>
-      </svg>
-    </div>
-
-    <!-- Right: Geometric frame -->
-    <div class="ornament ornament--right-3" data-gear-speed="0.9" data-gear-direction="-1">
-      <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" fill="none">
-        <circle cx="100" cy="100" r="85" stroke="#D1D5DB" stroke-width="0.45"/>
-        <circle cx="100" cy="100" r="60" stroke="#D1D5DB" stroke-width="0.35"/>
-        <rect x="45" y="45" width="110" height="110" stroke="#D1D5DB" stroke-width="0.3" transform="rotate(45 100 100)"/>
-        <!-- Cross with serif ends -->
-        <line x1="100" y1="15" x2="100" y2="185" stroke="#D1D5DB" stroke-width="0.3"/>
-        <line x1="15" y1="100" x2="185" y2="100" stroke="#D1D5DB" stroke-width="0.3"/>
-        <line x1="95" y1="15" x2="105" y2="15" stroke="#D1D5DB" stroke-width="0.4"/>
-        <line x1="95" y1="185" x2="105" y2="185" stroke="#D1D5DB" stroke-width="0.4"/>
-        <line x1="15" y1="95" x2="15" y2="105" stroke="#D1D5DB" stroke-width="0.4"/>
-        <line x1="185" y1="95" x2="185" y2="105" stroke="#D1D5DB" stroke-width="0.4"/>
-        <circle cx="100" cy="100" r="3" fill="#D1D5DB" opacity="0.4"/>
+        <!-- Outer ring -->
+        <circle cx="100" cy="100" r="90" stroke="#4B5563" stroke-width="1"/>
+        <!-- Middle dashed ring -->
+        <circle cx="100" cy="100" r="65" stroke="#4B5563" stroke-width="0.8" stroke-dasharray="3 4"/>
+        <!-- Inner ring -->
+        <circle cx="100" cy="100" r="38" stroke="#4B5563" stroke-width="1"/>
+        <!-- 12 radial sun rays -->
+        <line x1="100" y1="10" x2="100" y2="62" stroke="#4B5563" stroke-width="0.9"/>
+        <line x1="100" y1="138" x2="100" y2="190" stroke="#4B5563" stroke-width="0.9"/>
+        <line x1="10" y1="100" x2="62" y2="100" stroke="#4B5563" stroke-width="0.9"/>
+        <line x1="138" y1="100" x2="190" y2="100" stroke="#4B5563" stroke-width="0.9"/>
+        <line x1="36" y1="36" x2="72" y2="72" stroke="#4B5563" stroke-width="0.7"/>
+        <line x1="128" y1="128" x2="164" y2="164" stroke="#4B5563" stroke-width="0.7"/>
+        <line x1="164" y1="36" x2="128" y2="72" stroke="#4B5563" stroke-width="0.7"/>
+        <line x1="72" y1="128" x2="36" y2="164" stroke="#4B5563" stroke-width="0.7"/>
+        <!-- Extra intermediate rays -->
+        <line x1="67" y1="18" x2="80" y2="62" stroke="#4B5563" stroke-width="0.5"/>
+        <line x1="133" y1="18" x2="120" y2="62" stroke="#4B5563" stroke-width="0.5"/>
+        <line x1="18" y1="67" x2="62" y2="80" stroke="#4B5563" stroke-width="0.5"/>
+        <line x1="18" y1="133" x2="62" y2="120" stroke="#4B5563" stroke-width="0.5"/>
+        <line x1="182" y1="67" x2="138" y2="80" stroke="#4B5563" stroke-width="0.5"/>
+        <line x1="182" y1="133" x2="138" y2="120" stroke="#4B5563" stroke-width="0.5"/>
+        <line x1="67" y1="182" x2="80" y2="138" stroke="#4B5563" stroke-width="0.5"/>
+        <line x1="133" y1="182" x2="120" y2="138" stroke="#4B5563" stroke-width="0.5"/>
+        <!-- Small dots at cardinal tips -->
+        <circle cx="100" cy="10" r="2.5" fill="#4B5563" opacity="0.6"/>
+        <circle cx="100" cy="190" r="2.5" fill="#4B5563" opacity="0.6"/>
+        <circle cx="10" cy="100" r="2.5" fill="#4B5563" opacity="0.6"/>
+        <circle cx="190" cy="100" r="2.5" fill="#4B5563" opacity="0.6"/>
+        <!-- Center dot -->
+        <circle cx="100" cy="100" r="5" fill="#4B5563" opacity="0.6"/>
+        <circle cx="100" cy="100" r="2" fill="#4B5563" opacity="0.9"/>
       </svg>
     </div>
 
@@ -1532,8 +1436,8 @@
       function updateOrnaments() {
         const scrollY = window.scrollY;
         ornaments.forEach(el => {
-          const speed = parseFloat(el.dataset.gearSpeed) || 1;
-          const direction = parseInt(el.dataset.gearDirection) || 1;
+          const speed = parseFloat(el.dataset.speed) || 1;
+          const direction = parseInt(el.dataset.direction) || 1;
           const rotation = scrollY * speed * direction * 0.12;
           el.style.transform = `rotate(${rotation}deg)`;
         });
